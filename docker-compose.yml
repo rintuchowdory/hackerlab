@@ -2,10 +2,9 @@ services:
   juice-shop:
     image: bkimminich/juice-shop
     restart: unless-stopped
-    ports:
-      - "127.0.0.1:3000:3000"
     networks:
-      - hackerlab-net
+      hackerlab-net:
+        ipv4_address: 172.29.250.10
 
   hackerlab:
     build: .
@@ -20,3 +19,7 @@ services:
 networks:
   hackerlab-net:
     driver: bridge
+    internal: true
+    ipam:
+      config:
+        - subnet: 172.29.250.0/24

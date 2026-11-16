@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run WPScan in passive detection mode against a private lab WordPress site."""
+"""Run passive WPScan checks against a private lab WordPress site."""
 from __future__ import annotations
 
 import argparse
@@ -22,9 +22,10 @@ def run_wpscan(target: str, output: str = "wpscan-results.json", timeout: int = 
     output_path = Path(output).expanduser().resolve()
     if output_path.exists():
         output_path.unlink()
-    command = ["wpscan", "--url", safe_url, "--format", "json", "--output", str(output_path),
-               "--no-update", "--detection-mode", "passive", "--throttle", "500",
-               "--plugins-detection", "passive", "--themes-detection", "passive"]
+    command = [
+        "wpscan", "--url", safe_url, "--format", "json", "--output", str(output_path),
+        "--no-update", "--detection-mode", "passive", "--throttle", "500",
+    ]
     completed = subprocess.run(command, capture_output=True, text=True, timeout=timeout, check=False)
     if output_path.exists():
         try:
@@ -33,10 +34,13 @@ def run_wpscan(target: str, output: str = "wpscan-results.json", timeout: int = 
             raise RuntimeError(f"WPScan output was not valid JSON: {exc}") from exc
     else:
         report = {"raw_output": completed.stdout}
-    if completed.returncode != 0 and not report:
-        raise RuntimeError(completed.stderr.strip() or f"WPScan exited with code {completed.returncode}")
-    return {"scanner": "wpscan", "target": safe_url, "report": report,
-            "return_code": completed.returncode, "stderr": completed.stderr.strip()}
+    return {
+        "scanner": "wpscan",
+        "target": safe_url,
+        "report": report,
+        "return_code": completed.returncode,
+        "stderr": completed.stderr.strip(),
+    }
 
 
 def main() -> int:
@@ -47,7 +51,7 @@ def main() -> int:
     try:
         result = run_wpscan(args.target, args.output)
         print(json.dumps(result, indent=2))
-        return 0
+        return 0 if result["return_code"] == 0 else 1
     except (TargetError, RuntimeError, subprocess.TimeoutExpired) as exc:
         print(f"[!] {exc}", file=sys.stderr)
         return 2
