@@ -1,42 +1,323 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b1020">
-<meta name="description" content="HackerLab — a safe, local-first cybersecurity learning workspace for Kali Linux.">
-<title>HackerLab — Security Learning Workspace</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d18">
+<meta name="description" content="HackerLab is a local-first cybersecurity learning workspace with defensive workflows, browser-based utilities and a curated security toolkit.">
+<title>HackerLab — Security Operations Workspace</title>
 <style>
-:root{color-scheme:dark;--bg:#090e1b;--panel:#111a2c;--panel2:#151f34;--line:#25334d;--muted:#91a0b9;--text:#edf3ff;--green:#63e6b0;--blue:#78aaff;--amber:#ffca70;--red:#ff7d87}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% -10%,#1c3152 0,transparent 42%),var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.shell{max-width:1240px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:28px}.brand{display:flex;align-items:center;gap:12px}.mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#63e6b0,#78aaff);display:grid;place-items:center;color:#07111d;font-weight:900;font-size:20px}.brand strong{display:block;font-size:18px;letter-spacing:.04em}.brand small,.muted{color:var(--muted)}.status{border:1px solid #275c4e;color:var(--green);padding:7px 12px;border-radius:999px;font-size:12px;background:#10271f}.hero{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:30px 0}.eyebrow{color:var(--green);font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.08;margin:10px 0}.hero p{max-width:650px;color:var(--muted);margin:0}.hero-tag{border:1px solid var(--line);border-radius:14px;padding:12px 16px;color:var(--muted);white-space:nowrap}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{background:linear-gradient(160deg,#141f33,#101827);border:1px solid var(--line);border-radius:18px;padding:20px;min-width:0}.stat{grid-column:span 3}.wide{grid-column:span 8}.side{grid-column:span 4}.full{grid-column:1/-1}.card h2{font-size:17px;margin:0 0 14px}.stat .num{font-size:27px;font-weight:750;letter-spacing:-.04em}.stat p{margin:3px 0 0;color:var(--muted);font-size:13px}.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 9px;font-size:11px;font-weight:700;background:#1c2b43;color:#b8c9e4}.pill.green{background:#15352c;color:var(--green)}.pill.amber{background:#3b2c18;color:var(--amber)}.tool-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.tool{padding:14px;border-radius:13px;background:var(--panel2);border:1px solid var(--line)}.tool b{display:block;margin-bottom:4px}.tool p{margin:0;color:var(--muted);font-size:13px}.icon{font-size:20px;margin-bottom:8px}.steps{display:grid;gap:12px}.step{display:flex;gap:12px;align-items:flex-start}.step-no{flex:0 0 28px;height:28px;border-radius:9px;background:#20334f;color:var(--blue);display:grid;place-items:center;font-weight:800}.step p{margin:0;color:var(--muted);font-size:13px}.step b{display:block;color:var(--text);font-size:14px}.code{position:relative;background:#080d17;border:1px solid #263650;border-radius:12px;padding:14px;overflow:auto;color:#b9f4d9;font:12px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre}.copy{float:right;border:1px solid var(--line);background:#1a2940;color:var(--text);border-radius:8px;padding:6px 10px;cursor:pointer}.notice{border-left:3px solid var(--amber);padding:10px 13px;background:#2a2419;border-radius:0 10px 10px 0;color:#e9d3a9;font-size:13px}.footer{padding:24px 0 8px;color:var(--muted);font-size:12px;text-align:center}.links{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:13px}button:focus-visible,a:focus-visible{outline:2px solid var(--green);outline-offset:3px}@media(max-width:850px){.stat{grid-column:span 6}.wide,.side{grid-column:1/-1}}@media(max-width:560px){.shell{padding:18px}.hero{display:block}.hero-tag{display:inline-block;margin-top:16px}.stat{grid-column:span 6}.tool-list{grid-template-columns:1fr}.top{align-items:flex-start}.status{font-size:10px}}
+:root{color-scheme:dark;--bg:#080d18;--panel:#101827;--panel2:#141f31;--panel3:#19263a;--line:#25354d;--muted:#91a1b8;--text:#edf3ff;--green:#69e5b5;--blue:#83adff;--amber:#f5c36a;--red:#ff858d;--purple:#b6a0ff;--shadow:0 18px 48px rgba(0,0,0,.22);--radius:17px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:radial-gradient(ellipse at 64% -12%,#1b3150 0,transparent 34%),var(--bg);color:var(--text);font:14px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button,input,textarea,select{font:inherit}button{cursor:pointer}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:238px;padding:22px 15px;background:rgba(9,15,27,.96);border-right:1px solid var(--line);display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:11px;padding:4px 8px 25px}.mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--green),var(--blue));display:grid;place-items:center;color:#081321;font-weight:950;font-size:20px;box-shadow:0 8px 26px #63e6b022}.brand strong{display:block;font-size:15px;letter-spacing:.12em}.brand small{display:block;color:var(--muted);font-size:11px}.nav-label{margin:15px 10px 7px;color:#64758d;font-size:10px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}.nav{display:grid;gap:4px}.nav a{display:flex;align-items:center;gap:11px;padding:10px 11px;color:#aab8cc;border:1px solid transparent;border-radius:10px;font-size:13px}.nav a:hover,.nav a.active{background:#18263a;border-color:#293b55;color:#fff;text-decoration:none}.nav-icon{width:21px;text-align:center;font-size:15px;color:var(--green)}.side-bottom{margin-top:auto}.lab-chip{padding:12px;border:1px solid #285448;background:#10251f;border-radius:12px;color:#b5efdc;font-size:11px}.lab-chip b{display:block;color:var(--green);font-size:12px;margin-bottom:3px}.side-foot{padding:14px 8px 0;color:#718098;font-size:10px}.main{margin-left:238px;max-width:1700px;padding:24px 32px 46px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:23px}.crumb{color:var(--muted);font-size:12px}.crumb b{color:var(--text);font-weight:700}.top-actions{display:flex;align-items:center;gap:10px}.search{width:min(330px,36vw);position:relative}.search input{width:100%;background:#101a2a;border:1px solid var(--line);border-radius:10px;padding:10px 38px 10px 35px;color:var(--text);outline:none}.search input:focus,.field:focus,textarea:focus,select:focus{border-color:#5983c8;box-shadow:0 0 0 3px #5585d322;outline:none}.search:before{content:"⌕";position:absolute;left:13px;top:5px;color:#94a6c0;font-size:20px}.keyhint{position:absolute;right:10px;top:9px;color:#6e7f98;font-size:10px;border:1px solid #34445d;border-radius:5px;padding:1px 5px}.top-status{font-size:11px;color:var(--green);border:1px solid #285448;border-radius:999px;padding:7px 11px;background:#10251f;white-space:nowrap}.hero{position:relative;overflow:hidden;border:1px solid #2b4260;border-radius:22px;padding:27px 29px;background:linear-gradient(112deg,#14253b 0%,#111d30 55%,#1a2540 100%);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:22px;margin-bottom:18px}.hero:after{content:"";position:absolute;width:310px;height:310px;border-radius:50%;right:7%;top:-220px;border:1px solid #79a8ff2c;box-shadow:0 0 0 28px #79a8ff08,0 0 0 58px #79a8ff06}.hero-content{position:relative;z-index:1}.eyebrow{color:var(--green);font-size:10px;font-weight:850;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(29px,4vw,43px);line-height:1.08;letter-spacing:-.045em;margin:9px 0 10px}.hero p{max-width:710px;color:#a9b9d0;margin:0;font-size:13px}.hero-actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px;min-width:190px;justify-content:flex-end}.btn{display:inline-flex;justify-content:center;align-items:center;gap:7px;border:1px solid #354966;background:#1b2b42;color:#eaf2ff;padding:9px 13px;border-radius:9px;font-size:12px;font-weight:750}.btn:hover{background:#263b59;text-decoration:none}.btn.primary{background:linear-gradient(135deg,#6ee3b7,#8db5ff);border:0;color:#071522}.btn.primary:hover{filter:brightness(1.06)}.btn.ghost{background:transparent}.btn.small{padding:6px 9px;font-size:11px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 16px;min-width:0}.stat-top{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.stat strong{display:block;font-size:23px;letter-spacing:-.04em;margin:6px 0 0}.stat small{color:#71839d;font-size:10px}.stat-icon{width:29px;height:29px;border-radius:9px;background:#1c3046;display:grid;place-items:center;color:var(--green)}.section{margin:28px 0 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:13px}.section-head h2{font-size:18px;margin:3px 0 0;letter-spacing:-.02em}.section-head p{margin:4px 0 0;color:var(--muted);font-size:11px}.section-kicker{color:var(--blue);font-size:9px;letter-spacing:.16em;font-weight:850;text-transform:uppercase}.layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.85fr);gap:14px}.panel{background:linear-gradient(155deg,#121e30,#101827);border:1px solid var(--line);border-radius:var(--radius);padding:18px;min-width:0}.panel h3{margin:0 0 12px;font-size:14px}.panel-sub{color:var(--muted);font-size:11px;margin:-6px 0 13px}.quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.quick{border:1px solid var(--line);background:var(--panel2);padding:13px;border-radius:12px}.quick .qicon{font-size:19px;margin-bottom:8px}.quick b{display:block;font-size:12px}.quick p{margin:4px 0 10px;color:var(--muted);font-size:10px;min-height:31px}.tag{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:4px 8px;font-size:9px;font-weight:800;background:#1e2b40;color:#b9c9e0}.tag.local{background:#15382e;color:var(--green)}.tag.external{background:#302744;color:#c5b7ff}.tag.guide{background:#3b2e1d;color:var(--amber)}.codebox{position:relative;background:#080e18;border:1px solid #293b55;border-radius:11px;padding:13px;color:#b9f1d9;font:11px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre;overflow:auto}.copy-btn{position:absolute;right:8px;top:8px}.safety{border-left:3px solid var(--amber);border-radius:0 10px 10px 0;background:#2b251b;color:#ead8b4;padding:11px 12px;font-size:11px}.safety b{color:#ffe0a1}.path-list{display:grid;gap:11px}.path-item{display:flex;gap:10px;align-items:flex-start}.check{width:21px;height:21px;flex:0 0 21px;accent-color:#65dfb1;margin-top:1px}.path-item b{display:block;font-size:11px}.path-item span{display:block;color:var(--muted);font-size:10px}.progressbar{height:6px;background:#263449;border-radius:9px;overflow:hidden;margin:12px 0 6px}.progressbar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--blue));transition:width .2s}.progress-copy{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.filterbar{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}.filter{border:1px solid var(--line);background:#101a29;color:#9eafc6;border-radius:999px;padding:7px 11px;font-size:10px;font-weight:750}.filter.active{background:#1a3540;color:var(--green);border-color:#356557}.catalog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.catalog-card{border:1px solid var(--line);background:linear-gradient(150deg,#141f31,#101827);border-radius:13px;padding:14px;min-width:0;display:flex;flex-direction:column;gap:8px}.catalog-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.catalog-icon{width:31px;height:31px;background:#1e3048;border-radius:10px;display:grid;place-items:center;font-size:17px}.catalog-card h3{font-size:12px;margin:0}.catalog-card p{color:var(--muted);font-size:10px;margin:0;flex:1}.catalog-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:2px}.catalog-meta small{font-size:9px;color:#8495ad}.catalog-card[hidden]{display:none}.workflow-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.workflow{border:1px solid var(--line);background:#121e30;border-radius:13px;padding:14px}.workflow .n{font-size:10px;color:var(--green);font-weight:900;letter-spacing:.12em}.workflow h3{font-size:12px;margin:7px 0 5px}.workflow p{color:var(--muted);font-size:10px;margin:0 0 9px}.workflow a{font-size:10px}.utility-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.utility{background:#121e30;border:1px solid var(--line);border-radius:13px;padding:15px;min-width:0}.utility summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px}.utility summary::-webkit-details-marker{display:none}.util-title{display:flex;align-items:center;gap:9px}.util-icon{width:30px;height:30px;display:grid;place-items:center;background:#1e3048;border-radius:9px;font-size:16px}.util-title b{display:block;font-size:12px}.util-title small{display:block;color:var(--muted);font-size:9px}.chevron{color:var(--muted)}.utility-body{border-top:1px solid var(--line);margin-top:13px;padding-top:13px}.field-label{display:block;color:#aab9ce;font-size:10px;font-weight:750;margin:8px 0 5px}.field,textarea,select{width:100%;background:#0b1320;border:1px solid #2a3b55;color:var(--text);border-radius:8px;padding:9px 10px;font-size:11px}.field-row{display:flex;gap:8px;align-items:center}.field-row>*{min-width:0}.field-row .field{flex:1}.utility textarea{min-height:75px;resize:vertical}.output{margin-top:9px;background:#0a111d;border:1px solid #26364c;color:#c4e9d9;padding:10px;border-radius:8px;font:10px/1.6 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;min-height:38px}.options{display:flex;flex-wrap:wrap;gap:9px;margin:8px 0}.options label{font-size:10px;color:#b4c2d5;display:flex;align-items:center;gap:5px}.options input{accent-color:var(--green)}.utility .btn{margin-top:9px}.header-results{display:grid;gap:6px;margin-top:9px}.header-result{display:flex;justify-content:space-between;gap:8px;padding:6px 8px;border-radius:7px;background:#172438;font-size:10px}.header-result.good{color:var(--green)}.header-result.warn{color:var(--amber)}.report-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.report-grid .full{grid-column:1/-1}.resource-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.resource-link{background:#121e30;border:1px solid var(--line);border-radius:11px;padding:12px}.resource-link b{display:block;font-size:11px}.resource-link small{display:block;color:var(--muted);font-size:9px;margin-top:3px}.resource-link:hover{border-color:#4b6890;text-decoration:none}.toast{position:fixed;bottom:20px;right:22px;z-index:10;background:#1a3040;border:1px solid #3c715f;color:#c7f6e2;padding:10px 14px;border-radius:10px;box-shadow:var(--shadow);font-size:11px;opacity:0;transform:translateY(8px);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translateY(0)}.empty{display:none;color:var(--muted);font-size:11px;padding:18px;text-align:center;border:1px dashed var(--line);border-radius:12px}.footer{padding:30px 4px 0;text-align:center;color:#718098;font-size:10px}.muted{color:var(--muted)}.mobile-menu{display:none}
+@media(max-width:1120px){.main{padding:22px}.catalog{grid-template-columns:repeat(2,minmax(0,1fr))}.workflow-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.resource-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:820px){.sidebar{width:66px;padding:16px 8px}.brand{padding:4px 5px 22px}.brand>div:last-child,.nav-label,.nav a span:last-child,.lab-chip,.side-foot{display:none}.brand .mark{width:42px;height:42px}.nav a{justify-content:center;padding:11px 5px}.nav-icon{width:auto;font-size:17px}.main{margin-left:66px;padding:18px}.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.main{padding:13px}.topbar{align-items:flex-start;flex-direction:column}.top-actions{width:100%}.search{width:100%}.top-status{display:none}.hero{display:block;padding:21px}.hero-actions{justify-content:flex-start;margin-top:17px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:20px}.catalog,.utility-grid{grid-template-columns:1fr}.workflow-grid{grid-template-columns:1fr 1fr}.quick-grid{grid-template-columns:1fr}.resource-links{grid-template-columns:1fr 1fr}.section-head{align-items:flex-start;flex-direction:column}.report-grid{grid-template-columns:1fr}.report-grid .full{grid-column:auto}}
 </style>
 </head>
-<body><main class="shell">
-<header class="top"><div class="brand"><div class="mark">H</div><div><strong>HACKERLAB</strong><small>Local-first security learning workspace</small></div></div><span class="status">● LAB MODE · SAFE BY DEFAULT</span></header>
-<section class="hero"><div><div class="eyebrow">Kali Linux · Defensive learning · v0.2</div><h1>Learn security.<br>Stay inside the lab.</h1><p>A beginner-friendly workspace for understanding network discovery, web security concepts and secure coding. Run tools only against systems you own or are explicitly authorised to test.</p></div><div class="hero-tag">⌁ Dashboard preview</div></section>
-<section class="grid">
-<article class="card stat"><div class="eyebrow">Learning modules</div><div class="num">04</div><p>Guided, local exercises</p></article>
-<article class="card stat"><div class="eyebrow">Included tools</div><div class="num">03</div><p>Nmap · Gobuster · WPScan</p></article>
-<article class="card stat"><div class="eyebrow">Execution mode</div><div class="num" style="font-size:21px">Local only</div><p>Scans run from your Kali lab</p></article>
-<article class="card stat"><div class="eyebrow">Public target access</div><div class="num" style="color:var(--green);font-size:21px">Blocked</div><p>Target guard in CLI wrappers</p></article>
-<article class="card wide"><h2>Security toolkit</h2><div class="tool-list">
-<div class="tool"><div class="icon">⌕</div><b>Nmap discovery</b><p>Conservative TCP connect scan and service identification on private lab targets.</p></div>
-<div class="tool"><div class="icon">▤</div><b>Gobuster paths</b><p>Low-concurrency content discovery against your local training web app.</p></div>
-<div class="tool"><div class="icon">◎</div><b>WPScan checks</b><p>Passive WordPress detection for a local WordPress test environment.</p></div>
-<div class="tool"><div class="icon">⌘</div><b>SQL injection lesson</b><p>Compare unsafe SQL construction with parameterised queries in an offline demo.</p></div>
-<div class="tool"><div class="icon">⬡</div><b>Target safety guard</b><p>Rejects public targets and resolves hostnames before tool execution.</p></div>
-<div class="tool"><div class="icon">✓</div><b>Automated tests</b><p>Unit tests run in GitHub Actions; CI does not launch network scans.</p></div>
-</div></article>
-<aside class="card side"><h2>Learning path</h2><div class="steps">
-<div class="step"><span class="step-no">1</span><div><b>Start the isolated lab</b><p>Launch the Juice Shop and Kali toolbox containers.</p></div></div>
-<div class="step"><span class="step-no">2</span><div><b>Discover local services</b><p>Use the supplied Nmap wrapper against the lab hostname.</p></div></div>
-<div class="step"><span class="step-no">3</span><div><b>Study web responses</b><p>Explore directory discovery and understand application routing.</p></div></div>
-<div class="step"><span class="step-no">4</span><div><b>Review secure coding</b><p>Run the SQLite parameterisation exercise and unit tests.</p></div></div>
-</div></aside>
-<article class="card wide"><h2>Launch your local training environment</h2><p class="muted">Run these commands on your Kali host, from the HackerLab repository directory.</p><button class="copy" id="copy">Copy commands</button><pre class="code" id="commands">docker compose up -d juice-shop
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="mark">H</div><div><strong>HACKERLAB</strong><small>Security workspace</small></div></div>
+  <div class="nav-label">Workspace</div>
+  <nav class="nav" aria-label="Main navigation">
+    <a class="active" href="#overview"><span class="nav-icon">⌂</span><span>Overview</span></a>
+    <a href="#toolkit"><span class="nav-icon">⌘</span><span>Tool directory</span></a>
+    <a href="#workflows"><span class="nav-icon">▤</span><span>Security workflows</span></a>
+    <a href="#utilities"><span class="nav-icon">⚙</span><span>Digital utilities</span></a>
+    <a href="#learning"><span class="nav-icon">◈</span><span>Learning tracks</span></a>
+    <a href="#reporting"><span class="nav-icon">▧</span><span>Report builder</span></a>
+  </nav>
+  <div class="nav-label">Reference</div>
+  <nav class="nav">
+    <a href="#resources"><span class="nav-icon">↗</span><span>Knowledge base</span></a>
+    <a href="https://github.com/rintuchowdory/hackerlab" target="_blank" rel="noreferrer"><span class="nav-icon">⌥</span><span>GitHub project</span></a>
+  </nav>
+  <div class="side-bottom">
+    <div class="lab-chip"><b>● LOCAL-FIRST MODE</b>Browser tools run on this device. Scanner workloads stay in your private lab.</div>
+    <div class="side-foot">HackerLab · v0.3 workspace</div>
+  </div>
+</aside>
+<main class="main">
+  <header class="topbar">
+    <div class="crumb">Workspace / <b>Overview</b></div>
+    <div class="top-actions">
+      <div class="search"><input id="globalSearch" type="search" placeholder="Search tools, services, topics…" aria-label="Search tools and services"><span class="keyhint">/</span></div>
+      <span class="top-status">● SAFE LAB · READY</span>
+    </div>
+  </header>
+
+  <section class="hero" id="overview">
+    <div class="hero-content">
+      <div class="eyebrow">Cybersecurity learning · Blue team + AppSec</div>
+      <h1>Your security workspace.<br>One focused place to learn and build.</h1>
+      <p>Discover the right tool for the job, follow repeatable security workflows, use practical browser-based utilities, and keep hands-on testing inside your authorised lab.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="btn primary" href="#toolkit">Explore tool directory ↗</a>
+      <a class="btn ghost" href="#utilities">Open digital utilities</a>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Workspace summary">
+    <article class="stat"><div class="stat-top"><span>Local lab scripts</span><span class="stat-icon">⌘</span></div><strong>05</strong><small>Nmap, Gobuster, WPScan, SQL demo, guard</small></article>
+    <article class="stat"><div class="stat-top"><span>Tool categories</span><span class="stat-icon">▦</span></div><strong>06</strong><small>Network, web, code, cloud, defence, learning</small></article>
+    <article class="stat"><div class="stat-top"><span>Browser utilities</span><span class="stat-icon">⚙</span></div><strong>06</strong><small>Runs locally in this browser session</small></article>
+    <article class="stat"><div class="stat-top"><span>Execution boundary</span><span class="stat-icon">⌑</span></div><strong style="font-size:19px;color:var(--green)">Private lab</strong><small>No public scanning or remote shell</small></article>
+  </section>
+
+  <section class="layout">
+    <article class="panel">
+      <div class="section-head"><div><div class="section-kicker">Start here</div><h2>Mission control</h2><p>Common actions for a productive security-learning session.</p></div><span class="tag local">LOCAL LAB</span></div>
+      <div class="quick-grid">
+        <div class="quick"><div class="qicon">🐳</div><b>Start isolated lab</b><p>Bring up OWASP Juice Shop and the Kali toolbox with Docker Compose.</p><button class="btn small" id="copyStart">Copy start commands</button></div>
+        <div class="quick"><div class="qicon">🧪</div><b>Run project tests</b><p>Check the Python safety helpers and learning exercises without network scans.</p><button class="btn small" id="copyTests">Copy test command</button></div>
+        <div class="quick"><div class="qicon">🧭</div><b>Choose a workflow</b><p>Use a repeatable checklist instead of running tools without a clear objective.</p><a class="btn small" href="#workflows">View workflows ↗</a></div>
+        <div class="quick"><div class="qicon">📝</div><b>Document a finding</b><p>Capture impact, evidence and a practical remediation recommendation.</p><a class="btn small" href="#reporting">Open report builder ↗</a></div>
+      </div>
+    </article>
+    <aside class="panel">
+      <div class="section-head"><div><div class="section-kicker">Guardrails</div><h2>Safe by design</h2></div></div>
+      <div class="safety"><b>Authorisation first.</b> Test only systems you own or have explicit written permission to assess. Follow each tool's scope and rate limits.</div>
+      <p class="muted" style="font-size:10px;margin:12px 0 0">The Vercel website is a static learning interface. It does not execute scanners, connect to Kali, send pasted content to a server, or host the intentionally vulnerable Juice Shop.</p>
+      <div class="codebox" style="margin-top:12px">docker compose up -d juice-shop
 docker compose build hackerlab
-docker compose run --rm hackerlab</pre><p class="muted" style="font-size:12px">Inside the toolbox, use <code>juice-shop</code> as the target hostname. The Compose network is internal-only.</p></article>
-<aside class="card side"><h2>Safety boundary</h2><div class="notice">This hosted dashboard is an information and learning interface. It does not run Nmap, Gobuster or WPScan from Vercel, and it does not connect to your Kali machine.</div><p class="muted" style="font-size:13px;margin-top:14px">Keep OWASP Juice Shop private to your Docker lab. Never expose the intentionally vulnerable target to the public internet.</p></aside>
-<article class="card full"><h2>Project resources</h2><p class="muted">Read the source and lab instructions before running an exercise.</p><div class="links"><a href="https://github.com/rintuchowdory/hackerlab" target="_blank" rel="noreferrer">GitHub repository ↗</a><a href="https://github.com/rintuchowdory/hackerlab/blob/main/docs/lab-setup.md" target="_blank" rel="noreferrer">Lab setup guide ↗</a><a href="https://owasp.org/www-project-juice-shop/" target="_blank" rel="noreferrer">OWASP Juice Shop ↗</a></div></article>
-</section><footer class="footer">HackerLab · Educational use only · Test only systems you own or have explicit permission to assess.</footer>
-</main><script>
-document.getElementById('copy').addEventListener('click',async()=>{const t=document.getElementById('commands').innerText;const b=document.getElementById('copy');try{await navigator.clipboard.writeText(t);b.textContent='Copied ✓'}catch{b.textContent='Select commands to copy'}setTimeout(()=>b.textContent='Copy commands',1800)});
-</script></body></html>
+docker compose run --rm hackerlab<button class="btn small copy-btn" id="copyAll">Copy</button></div>
+      <p class="muted" style="font-size:9px;margin:8px 0 0">Run from your local HackerLab repository folder on Kali.</p>
+    </aside>
+  </section>
+
+  <section class="section" id="toolkit">
+    <div class="section-head"><div><div class="section-kicker">Curated directory</div><h2>Security tools & services</h2><p>Choose by security job. External projects open in a new tab; they are not installed or connected to this dashboard.</p></div><span class="tag external">OPEN-SOURCE + LEARNING</span></div>
+    <div class="filterbar" role="group" aria-label="Filter tool categories">
+      <button class="filter active" data-filter="all">All tools</button>
+      <button class="filter" data-filter="network">Network</button>
+      <button class="filter" data-filter="web">Web & API</button>
+      <button class="filter" data-filter="code">Code & supply chain</button>
+      <button class="filter" data-filter="cloud">Cloud & containers</button>
+      <button class="filter" data-filter="defence">Defence & response</button>
+      <button class="filter" data-filter="learn">Learning</button>
+    </div>
+    <div class="catalog" id="catalog">
+      <article class="catalog-card" data-category="network" data-search="nmap network port discovery service fingerprint local lab"><div class="catalog-top"><span class="catalog-icon">⌕</span><span class="tag local">In this repo</span></div><h3>Nmap</h3><p>Discover live services and identify versions on private lab targets. HackerLab includes a conservative TCP-connect wrapper.</p><div class="catalog-meta"><small>Network discovery</small><a href="https://nmap.org/book/man.html" target="_blank" rel="noreferrer">Docs ↗</a></div></article>
+      <article class="catalog-card" data-category="network" data-search="gobuster directory content discovery web paths"><div class="catalog-top"><span class="catalog-icon">▤</span><span class="tag local">In this repo</span></div><h3>Gobuster</h3><p>Learn controlled content discovery using a small wordlist and low concurrency against the local Juice Shop lab.</p><div class="catalog-meta"><small>Content discovery</small><a href="https://github.com/OJ/gobuster" target="_blank" rel="noreferrer">Project ↗</a></div></article>
+      <article class="catalog-card" data-category="web" data-search="wpscan wordpress passive detection website"><div class="catalog-top"><span class="catalog-icon">◎</span><span class="tag local">In this repo</span></div><h3>WPScan</h3><p>Passive WordPress detection for your own local training instance. No password attacks or username enumeration.</p><div class="catalog-meta"><small>WordPress security</small><a href="https://wpscan.com/" target="_blank" rel="noreferrer">Project ↗</a></div></article>
+      <article class="catalog-card" data-category="web" data-search="owasp zap dynamic application security testing api proxy"><div class="catalog-top"><span class="catalog-icon">◉</span><span class="tag external">External project</span></div><h3>OWASP ZAP</h3><p>Intercepting proxy and web application security testing platform for authorised test applications and APIs.</p><div class="catalog-meta"><small>DAST · Web/API</small><a href="https://www.zaproxy.org/docs/" target="_blank" rel="noreferrer">Docs ↗</a></div></article>
+      <article class="catalog-card" data-category="web" data-search="burp suite community intercept proxy web security"><div class="catalog-top"><span class="catalog-icon">⇄</span><span class="tag external">External project</span></div><h3>Burp Suite Community</h3><p>Manual web testing toolkit for understanding requests, responses, cookies and application behaviour.</p><div class="catalog-meta"><small>Web testing</small><a href="https://portswigger.net/burp/communitydownload" target="_blank" rel="noreferrer">Get started ↗</a></div></article>
+      <article class="catalog-card" data-category="code" data-search="semgrep static analysis sast code vulnerabilities patterns"><div class="catalog-top"><span class="catalog-icon">⌁</span><span class="tag external">External project</span></div><h3>Semgrep</h3><p>Find risky code patterns with configurable static analysis rules across supported programming languages.</p><div class="catalog-meta"><small>SAST · Code review</small><a href="https://semgrep.dev/docs/" target="_blank" rel="noreferrer">Docs ↗</a></div></article>
+      <article class="catalog-card" data-category="code" data-search="gitleaks secrets credentials token git repository"><div class="catalog-top"><span class="catalog-icon">🔑</span><span class="tag external">External project</span></div><h3>Gitleaks</h3><p>Detect accidentally committed credentials and secrets in Git repositories and file histories.</p><div class="catalog-meta"><small>Secret scanning</small><a href="https://github.com/gitleaks/gitleaks" target="_blank" rel="noreferrer">Project ↗</a></div></article>
+      <article class="catalog-card" data-category="code cloud" data-search="trivy software composition analysis container image infrastructure as code vulnerabilities"><div class="catalog-top"><span class="catalog-icon">⬡</span><span class="tag external">External project</span></div><h3>Trivy</h3><p>Scan container images, file systems, repositories and infrastructure-as-code for vulnerabilities and misconfigurations.</p><div class="catalog-meta"><small>SCA · Container · IaC</small><a href="https://trivy.dev/latest/" target="_blank" rel="noreferrer">Docs ↗</a></div></article>
+      <article class="catalog-card" data-category="code" data-search="osv scanner dependency vulnerability open source packages"><div class="catalog-top"><span class="catalog-icon">◇</span><span class="tag external">External project</span></div><h3>OSV-Scanner</h3><p>Check project dependencies against the Open Source Vulnerabilities database and review affected packages.</p><div class="catalog-meta"><small>Dependency security</small><a href="https://google.github.io/osv-scanner/" target="_blank" rel="noreferrer">Docs ↗</a></div></article>
+      <article class="catalog-card" data-category="cloud" data-search="prowler cloud security posture aws azure google cloud audit"><div class="catalog-top"><span class="catalog-icon">☁</span><span class="tag external">External project</span></div><h3>Prowler</h3><p>Assess cloud security posture across supported cloud environments with checks and compliance-oriented output.</p><div class="catalog-meta"><small>CSPM · Cloud</small><a href="https://docs.prowler.com/" target="_blank" rel="noreferrer">Docs ↗</a></div></article>
+      <article class="catalog-card" data-category="defence" data-search="wazuh siem xdr endpoint security log monitoring detection"><div class="catalog-top"><span class="catalog-icon">◫</span><span class="tag external">External project</span></div><h3>Wazuh</h3><p>Centralise endpoint telemetry, analyse security events and practise alert triage in a defensive lab.</p><div class="catalog-meta"><small>SIEM · Endpoint</small><a href="https://documentation.wazuh.com/" target="_blank" rel="noreferrer">Docs ↗</a></div></article>
+      <article class="catalog-card" data-category="defence" data-search="suricata intrusion detection prevention network monitoring ids ips"><div class="catalog-top"><span class="catalog-icon">⌁</span><span class="tag external">External project</span></div><h3>Suricata</h3><p>Network threat detection engine for learning IDS/IPS concepts and analysing traffic in a controlled lab.</p><div class="catalog-meta"><small>Network detection</small><a href="https://docs.suricata.io/" target="_blank" rel="noreferrer">Docs ↗</a></div></article>
+      <article class="catalog-card" data-category="defence" data-search="zeek network security monitoring protocol metadata logs"><div class="catalog-top"><span class="catalog-icon">⌗</span><span class="tag external">External project</span></div><h3>Zeek</h3><p>Generate rich network protocol logs for investigation, traffic analysis and detection engineering exercises.</p><div class="catalog-meta"><small>Network visibility</small><a href="https://docs.zeek.org/" target="_blank" rel="noreferrer">Docs ↗</a></div></article>
+      <article class="catalog-card" data-category="learn" data-search="owasp juice shop vulnerable web app training"><div class="catalog-top"><span class="catalog-icon">🍹</span><span class="tag local">Local lab target</span></div><h3>OWASP Juice Shop</h3><p>Intentionally vulnerable training application already included in the HackerLab Docker Compose lab.</p><div class="catalog-meta"><small>Hands-on practice</small><a href="https://owasp.org/www-project-juice-shop/" target="_blank" rel="noreferrer">Project ↗</a></div></article>
+      <article class="catalog-card" data-category="learn" data-search="portswigger web security academy free labs learning"><div class="catalog-top"><span class="catalog-icon">🎓</span><span class="tag guide">Training resource</span></div><h3>PortSwigger Web Security Academy</h3><p>Free guided lessons and interactive labs for web vulnerabilities, authentication and API security.</p><div class="catalog-meta"><small>Web security learning</small><a href="https://portswigger.net/web-security" target="_blank" rel="noreferrer">Academy ↗</a></div></article>
+      <article class="catalog-card" data-category="learn" data-search="owasp cheat sheet series secure coding reference"><div class="catalog-top"><span class="catalog-icon">📚</span><span class="tag guide">Reference</span></div><h3>OWASP Cheat Sheet Series</h3><p>Practical implementation guidance for authentication, access control, input validation and secure configuration.</p><div class="catalog-meta"><small>Secure development</small><a href="https://cheatsheetseries.owasp.org/" target="_blank" rel="noreferrer">Read ↗</a></div></article>
+    </div>
+    <div class="empty" id="catalogEmpty">No matching tools. Try another search term or category.</div>
+  </section>
+
+  <section class="section" id="workflows">
+    <div class="section-head"><div><div class="section-kicker">Repeatable process</div><h2>Security workflows</h2><p>Practical service paths that help turn a tool into a useful outcome.</p></div></div>
+    <div class="workflow-grid">
+      <article class="workflow"><div class="n">WORKFLOW 01</div><h3>Asset discovery</h3><p>Confirm scope → identify private lab host → map open services → record expected exposure.</p><a href="https://nmap.org/book/man.html" target="_blank" rel="noreferrer">Nmap reference ↗</a></article>
+      <article class="workflow"><div class="n">WORKFLOW 02</div><h3>Web application review</h3><p>Map user roles → inspect requests → test input handling → verify headers → document impact.</p><a href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" rel="noreferrer">OWASP testing guide ↗</a></article>
+      <article class="workflow"><div class="n">WORKFLOW 03</div><h3>Secure code release</h3><p>Review changes → scan source → check dependencies → detect secrets → resolve findings.</p><a href="https://docs.github.com/en/code-security" target="_blank" rel="noreferrer">GitHub code security ↗</a></article>
+      <article class="workflow"><div class="n">WORKFLOW 04</div><h3>Defensive investigation</h3><p>Preserve logs → build a timeline → identify indicators → scope impact → record response actions.</p><a href="https://attack.mitre.org/" target="_blank" rel="noreferrer">MITRE ATT&CK ↗</a></article>
+    </div>
+  </section>
+
+  <section class="section" id="utilities">
+    <div class="section-head"><div><div class="section-kicker">Built-in digital tools</div><h2>Browser utilities</h2><p>These tools process inputs in your browser. Nothing is uploaded by this page. Do not paste real secrets into shared devices.</p></div><span class="tag local">CLIENT-SIDE</span></div>
+    <div class="utility-grid">
+      <details class="utility" open>
+        <summary><span class="util-title"><span class="util-icon">🔐</span><span><b>Password generator</b><small>Cryptographically secure random characters</small></span></span><span class="chevron">＋</span></summary>
+        <div class="utility-body">
+          <label class="field-label" for="pwLength">Length: <output id="pwLengthOut">20</output></label><input class="field" id="pwLength" type="range" min="12" max="64" value="20">
+          <div class="options"><label><input id="pwLower" type="checkbox" checked> Lowercase</label><label><input id="pwUpper" type="checkbox" checked> Uppercase</label><label><input id="pwNumbers" type="checkbox" checked> Numbers</label><label><input id="pwSymbols" type="checkbox" checked> Symbols</label></div>
+          <div class="field-row"><input class="field" id="pwOutput" readonly aria-label="Generated password" placeholder="Generate a password"><button class="btn small" id="copyPw">Copy</button></div>
+          <button class="btn primary small" id="makePw">Generate secure password</button><p class="muted" style="font-size:9px">Uses the browser's Web Crypto random number generator. Store generated credentials in a password manager.</p>
+        </div>
+      </details>
+
+      <details class="utility">
+        <summary><span class="util-title"><span class="util-icon">#</span><span><b>SHA-256 text hash</b><small>Hash a text snippet locally</small></span></span><span class="chevron">＋</span></summary>
+        <div class="utility-body">
+          <label class="field-label" for="hashInput">Text to hash</label><textarea id="hashInput" placeholder="Enter a sample string…"></textarea><button class="btn primary small" id="makeHash">Calculate SHA-256</button><div class="output" id="hashOutput" aria-live="polite">Hash appears here.</div>
+        </div>
+      </details>
+
+      <details class="utility">
+        <summary><span class="util-title"><span class="util-icon">{ }</span><span><b>JSON formatter & validator</b><small>Validate and pretty-print JSON</small></span></span><span class="chevron">＋</span></summary>
+        <div class="utility-body">
+          <label class="field-label" for="jsonInput">JSON input</label><textarea id="jsonInput" placeholder='{"status":"ok","items":[1,2,3]}'></textarea><button class="btn primary small" id="formatJson">Format and validate</button><div class="output" id="jsonOutput" aria-live="polite">Formatted JSON appears here.</div><button class="btn small" id="copyJson">Copy formatted JSON</button>
+        </div>
+      </details>
+
+      <details class="utility">
+        <summary><span class="util-title"><span class="util-icon">↔</span><span><b>URL encoder / decoder</b><small>Transform URL components</small></span></span><span class="chevron">＋</span></summary>
+        <div class="utility-body">
+          <label class="field-label" for="urlInput">Input text</label><textarea id="urlInput" placeholder="Text or URL component…"></textarea><div class="field-row"><button class="btn small" id="urlEncode">Encode</button><button class="btn small" id="urlDecode">Decode</button><button class="btn small" id="copyUrl">Copy result</button></div><div class="output" id="urlOutput" aria-live="polite">Result appears here.</div>
+        </div>
+      </details>
+
+      <details class="utility">
+        <summary><span class="util-title"><span class="util-icon">🛡</span><span><b>HTTP security header review</b><small>Check pasted response headers offline</small></span></span><span class="chevron">＋</span></summary>
+        <div class="utility-body">
+          <label class="field-label" for="headerInput">Paste response headers (one per line)</label><textarea id="headerInput" placeholder="HTTP/2 200&#10;strict-transport-security: max-age=31536000&#10;x-content-type-options: nosniff"></textarea><button class="btn primary small" id="checkHeaders">Review headers</button><div class="header-results" id="headerOutput" aria-live="polite"></div><p class="muted" style="font-size:9px">A learning checklist, not a complete security assessment. Header applicability depends on the application and deployment architecture.</p>
+        </div>
+      </details>
+
+      <details class="utility">
+        <summary><span class="util-title"><span class="util-icon">🧮</span><span><b>IPv4 subnet helper</b><small>Calculate network, broadcast and host range</small></span></span><span class="chevron">＋</span></summary>
+        <div class="utility-body">
+          <div class="field-row"><div style="flex:1"><label class="field-label" for="ipInput">IPv4 address</label><input class="field" id="ipInput" value="192.168.1.10" placeholder="192.168.1.10"></div><div style="width:95px"><label class="field-label" for="cidrInput">CIDR</label><input class="field" id="cidrInput" type="number" min="0" max="32" value="24"></div></div>
+          <button class="btn primary small" id="calcSubnet">Calculate subnet</button><div class="output" id="subnetOutput">Network details appear here.</div><p class="muted" style="font-size:9px">For learning and planning private lab networks; confirm routing and address allocations before making network changes.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="section" id="learning">
+    <div class="section-head"><div><div class="section-kicker">Personal progress</div><h2>Learning tracks</h2><p>Tick off milestones as you complete each lab. Progress is stored only in this browser.</p></div><button class="btn small ghost" id="resetProgress">Reset progress</button></div>
+    <div class="panel">
+      <div class="progress-copy"><span id="progressText">0 of 6 milestones complete</span><span id="progressPct">0%</span></div><div class="progressbar"><span id="progressFill"></span></div>
+      <div class="path-list" id="progressList">
+        <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="lab"><span><b>1. Build the isolated Docker lab</b><span>Start Juice Shop and open a toolbox shell using the lab guide.</span></span></label>
+        <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="network"><span><b>2. Understand private network discovery</b><span>Run the supplied Nmap wrapper against the Juice Shop service only.</span></span></label>
+        <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="web"><span><b>3. Explore web requests and responses</b><span>Study HTTP status codes, cookies, headers and application routes.</span></span></label>
+        <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="code"><span><b>4. Practise secure coding</b><span>Run the SQLite parameterisation demo and compare the safe query.</span></span></label>
+        <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="supply"><span><b>5. Add code and dependency checks</b><span>Explore source analysis, secret detection and software composition analysis.</span></span></label>
+        <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="report"><span><b>6. Write a concise security finding</b><span>Record evidence, severity, impact and remediation in the report builder.</span></span></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="reporting">
+    <div class="section-head"><div><div class="section-kicker">Documentation toolkit</div><h2>Security finding report builder</h2><p>Create a structured Markdown draft for your own lab notes. Review and sanitise evidence before sharing.</p></div></div>
+    <div class="panel">
+      <div class="report-grid">
+        <div><label class="field-label" for="findingTitle">Finding title</label><input class="field" id="findingTitle" placeholder="e.g. Missing security response header"></div>
+        <div><label class="field-label" for="findingSeverity">Severity</label><select id="findingSeverity" class="field"><option>Informational</option><option>Low</option><option selected>Medium</option><option>High</option><option>Critical</option></select></div>
+        <div class="full"><label class="field-label" for="findingAsset">Affected asset / lab target</label><input class="field" id="findingAsset" placeholder="e.g. Local Juice Shop training instance"></div>
+        <div class="full"><label class="field-label" for="findingSummary">Summary and impact</label><textarea id="findingSummary" placeholder="Describe what you observed and why it matters…"></textarea></div>
+        <div class="full"><label class="field-label" for="findingEvidence">Evidence (remove credentials and personal data)</label><textarea id="findingEvidence" placeholder="Record a minimal, reproducible observation…"></textarea></div>
+        <div class="full"><label class="field-label" for="findingFix">Recommended remediation</label><textarea id="findingFix" placeholder="Describe a practical defensive fix and how to verify it…"></textarea></div>
+      </div>
+      <button class="btn primary small" id="buildReport">Generate Markdown report</button><button class="btn small" id="copyReport">Copy report</button>
+      <div class="output" id="reportOutput" style="min-height:110px;margin-top:12px">Your report draft will appear here.</div>
+    </div>
+  </section>
+
+  <section class="section" id="resources">
+    <div class="section-head"><div><div class="section-kicker">Trusted references</div><h2>Knowledge base</h2><p>Official documentation and recognised security knowledge bases.</p></div></div>
+    <div class="resource-links">
+      <a class="resource-link" href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noreferrer"><b>OWASP Top 10 ↗</b><small>Web application risk awareness</small></a>
+      <a class="resource-link" href="https://attack.mitre.org/" target="_blank" rel="noreferrer"><b>MITRE ATT&CK ↗</b><small>Adversary tactics and techniques</small></a>
+      <a class="resource-link" href="https://nvd.nist.gov/" target="_blank" rel="noreferrer"><b>NIST NVD ↗</b><small>Public vulnerability information</small></a>
+      <a class="resource-link" href="https://www.first.org/cvss/" target="_blank" rel="noreferrer"><b>FIRST CVSS ↗</b><small>Vulnerability severity scoring</small></a>
+      <a class="resource-link" href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noreferrer"><b>CISA KEV ↗</b><small>Known exploited vulnerabilities</small></a>
+      <a class="resource-link" href="https://cheatsheetseries.owasp.org/" target="_blank" rel="noreferrer"><b>OWASP Cheat Sheets ↗</b><small>Secure implementation guidance</small></a>
+      <a class="resource-link" href="https://docs.github.com/en/code-security" target="_blank" rel="noreferrer"><b>GitHub Code Security ↗</b><small>Repository security workflows</small></a>
+      <a class="resource-link" href="https://www.cisecurity.org/cis-benchmarks" target="_blank" rel="noreferrer"><b>CIS Benchmarks ↗</b><small>Configuration hardening guidance</small></a>
+    </div>
+  </section>
+
+  <div class="footer">HackerLab · Educational use only · Keep vulnerable targets isolated · Verify scope and authorisation before every assessment.</div>
+</main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  "use strict";
+  const $=id=>document.getElementById(id);
+  let toastTimer;
+  function toast(message){const el=$("toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2300);}
+  async function copyText(text,label){if(!text){toast("Nothing to copy yet.");return;}try{await navigator.clipboard.writeText(text);toast(label||"Copied to clipboard.");}catch(e){toast("Clipboard unavailable. Select and copy the text manually.");}}
+  const startCommands="docker compose up -d juice-shop\ndocker compose build hackerlab\ndocker compose run --rm hackerlab";
+  $("copyStart").addEventListener("click",()=>copyText(startCommands,"Lab commands copied."));
+  $("copyAll").addEventListener("click",()=>copyText(startCommands,"Lab commands copied."));
+  $("copyTests").addEventListener("click",()=>copyText("python3 -m unittest discover -s tests -v\npython3 scripts/exploit_demo.py","Test commands copied."));
+  $("pwLength").addEventListener("input",()=>{$("pwLengthOut").textContent=$("pwLength").value;});
+  function secureIndex(max){const limit=Math.floor(256/max)*max;const b=new Uint8Array(1);do{crypto.getRandomValues(b);}while(b[0]>=limit);return b[0]%max;}
+  $("makePw").addEventListener("click",()=>{
+    if(!window.crypto||!crypto.getRandomValues){toast("Secure random generation is unavailable in this browser.");return;}
+    const sets=[];if($("pwLower").checked)sets.push("abcdefghijkmnopqrstuvwxyz");if($("pwUpper").checked)sets.push("ABCDEFGHJKLMNPQRSTUVWXYZ");if($("pwNumbers").checked)sets.push("23456789");if($("pwSymbols").checked)sets.push("!@#$%^&*()-_=+[]{}:,.?");
+    if(!sets.length){toast("Select at least one character set.");return;}
+    const all=sets.join("");const length=Number($("pwLength").value);if(length<sets.length){toast("Increase the length to include every selected set.");return;}
+    const chars=sets.map(s=>s[secureIndex(s.length)]);
+    while(chars.length<length)chars.push(all[secureIndex(all.length)]);
+    for(let i=chars.length-1;i>0;i--){const j=secureIndex(i+1);[chars[i],chars[j]]=[chars[j],chars[i]];}
+    $("pwOutput").value=chars.join("");toast("Password generated locally.");
+  });
+  $("copyPw").addEventListener("click",()=>copyText($("pwOutput").value,"Password copied. Clear the clipboard after use."));
+  $("makeHash").addEventListener("click",async()=>{
+    if(!window.crypto||!crypto.subtle){toast("SHA-256 requires a secure browser context (HTTPS).");return;}
+    const bytes=new TextEncoder().encode($("hashInput").value);const digest=await crypto.subtle.digest("SHA-256",bytes);$("hashOutput").textContent=Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,"0")).join("");
+  });
+  $("formatJson").addEventListener("click",()=>{
+    try{const parsed=JSON.parse($("jsonInput").value);$("jsonOutput").textContent=JSON.stringify(parsed,null,2);toast("Valid JSON.");}
+    catch(e){$("jsonOutput").textContent="Invalid JSON: "+e.message;toast("JSON validation failed.");}
+  });
+  $("copyJson").addEventListener("click",()=>copyText($("jsonOutput").textContent,"JSON copied."));
+  $("urlEncode").addEventListener("click",()=>{$("urlOutput").textContent=encodeURIComponent($("urlInput").value);});
+  $("urlDecode").addEventListener("click",()=>{try{$("urlOutput").textContent=decodeURIComponent($("urlInput").value);}catch(e){$("urlOutput").textContent="Invalid encoded input: "+e.message;}});
+  $("copyUrl").addEventListener("click",()=>copyText($("urlOutput").textContent,"URL result copied."));
+  $("checkHeaders").addEventListener("click",()=>{
+    const raw=$("headerInput").value;const map={};raw.split(/\r?\n/).forEach(line=>{const i=line.indexOf(":");if(i>0)map[line.slice(0,i).trim().toLowerCase()]=line.slice(i+1).trim();});
+    const checks=[
+      ["Strict-Transport-Security","strict-transport-security",v=>/max-age\s*=\s*\d+/i.test(v),"Use HSTS on HTTPS sites after confirming all relevant subdomains are HTTPS."],
+      ["Content-Security-Policy","content-security-policy",v=>v.length>0,"Define a restrictive policy; avoid unsafe-inline and unsafe-eval where possible."],
+      ["X-Content-Type-Options","x-content-type-options",v=>v.toLowerCase()==="nosniff","Set the value to nosniff."],
+      ["Referrer-Policy","referrer-policy",v=>v.length>0,"Choose a privacy-conscious referrer policy such as strict-origin-when-cross-origin."],
+      ["Permissions-Policy","permissions-policy",v=>v.length>0,"Explicitly restrict browser features the application does not need."],
+      ["Frame protection","x-frame-options",v=>v.length>0, "Use CSP frame-ancestors; X-Frame-Options can provide legacy browser support."]
+    ];
+    const hasCsp=!!map["content-security-policy"]&&/frame-ancestors/i.test(map["content-security-policy"]);
+    const out=checks.map(c=>{const present=c[1]==="x-frame-options"?(!!map[c[1]]||hasCsp):!!map[c[1]];const ok=present&&(c[1]==="x-frame-options"||c[2](map[c[1]]||""));return '<div class="header-result '+(ok?"good":"warn")+'"><span>'+(ok?"✓ ":"! ")+c[0]+'</span><span>'+(ok?"Detected":"Review recommended")+'</span></div>';}).join("");
+    $("headerOutput").innerHTML=out+'<p class="muted" style="font-size:9px">This checks only whether selected headers are present and some basic values. It cannot confirm the policy is correct for your application.</p>';
+  });
+  function ipv4ToInt(ip){const p=ip.split(".");if(p.length!==4||p.some(x=>!/^\d{1,3}$/.test(x)||Number(x)>255))throw new Error("Enter a valid IPv4 address.");return p.reduce((n,x)=>((n*256)+Number(x))>>>0,0)>>>0;}
+  function intToIp(n){return [(n>>>24)&255,(n>>>16)&255,(n>>>8)&255,n&255].join(".");}
+  $("calcSubnet").addEventListener("click",()=>{
+    try{
+      const ip=ipv4ToInt($("ipInput").value.trim());const cidr=Number($("cidrInput").value);
+      if(!Number.isInteger(cidr)||cidr<0||cidr>32)throw new Error("CIDR must be between 0 and 32.");
+      const mask=cidr===0?0:(0xffffffff<<(32-cidr))>>>0;const network=(ip&mask)>>>0;const broadcast=(network|(~mask>>>0))>>>0;const total=Math.pow(2,32-cidr);let first=network,last=broadcast;
+      if(cidr<=30){first=(network+1)>>>0;last=(broadcast-1)>>>0;}
+      const lines=["Network: "+intToIp(network)+"/"+cidr,"Subnet mask: "+intToIp(mask),"Broadcast: "+intToIp(broadcast),"Total addresses: "+total.toLocaleString(),"Usable host range: "+(cidr<=30?intToIp(first)+" – "+intToIp(last):(cidr===31?"Point-to-point /31":"Single-address /32"))];
+      $("subnetOutput").textContent=lines.join("\n");
+    }catch(e){$("subnetOutput").textContent=e.message;}
+  });
+  function updateProgress(){
+    const checks=Array.from(document.querySelectorAll(".progress-check"));const count=checks.filter(x=>x.checked).length;const pct=Math.round(count/checks.length*100);
+    $("progressText").textContent=count+" of "+checks.length+" milestones complete";$("progressPct").textContent=pct+"%";$("progressFill").style.width=pct+"%";
+    try{localStorage.setItem("hackerlab-progress-v2",JSON.stringify(checks.filter(x=>x.checked).map(x=>x.dataset.progress)));}catch(e){}
+  }
+  try{const saved=JSON.parse(localStorage.getItem("hackerlab-progress-v2")||"[]");document.querySelectorAll(".progress-check").forEach(x=>x.checked=saved.includes(x.dataset.progress));}catch(e){}
+  document.querySelectorAll(".progress-check").forEach(x=>x.addEventListener("change",updateProgress));updateProgress();
+  $("resetProgress").addEventListener("click",()=>{document.querySelectorAll(".progress-check").forEach(x=>x.checked=false);updateProgress();toast("Learning progress reset in this browser.");});
+  $("buildReport").addEventListener("click",()=>{
+    const title=$("findingTitle").value.trim()||"Untitled finding";const severity=$("findingSeverity").value;const asset=$("findingAsset").value.trim()||"Not specified";const summary=$("findingSummary").value.trim()||"Not provided";const evidence=$("findingEvidence").value.trim()||"Not provided";const fix=$("findingFix").value.trim()||"Not provided";
+    const md=["# "+title,"","- **Severity:** "+severity,"- **Affected asset:** "+asset,"","## Summary and impact",summary,"","## Evidence",evidence,"","## Recommended remediation",fix,"","## Validation","- [ ] Confirm the fix in the authorised test environment.","- [ ] Retest the original observation.","- [ ] Record date, scope and assessor."].join("\n");
+    $("reportOutput").textContent=md;toast("Report draft generated.");
+  });
+  $("copyReport").addEventListener("click",()=>copyText($("reportOutput").textContent,"Report copied."));
+  let activeFilter="all";
+  function filterCatalog(){
+    const q=$("globalSearch").value.trim().toLowerCase();let visible=0;
+    document.querySelectorAll(".catalog-card").forEach(card=>{
+      const category=card.dataset.category.split(" ");const matchesCategory=activeFilter==="all"||category.includes(activeFilter);const text=(card.innerText+" "+card.dataset.search).toLowerCase();const matchesSearch=!q||text.includes(q);card.hidden=!(matchesCategory&&matchesSearch);if(!card.hidden)visible++;
+    });
+    $("catalogEmpty").style.display=visible?"none":"block";
+  }
+  document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));btn.classList.add("active");activeFilter=btn.dataset.filter;filterCatalog();}));
+  $("globalSearch").addEventListener("input",filterCatalog);
+  document.addEventListener("keydown",e=>{if(e.key==="/"&&!["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();$("globalSearch").focus();}if(e.key==="Escape"&&document.activeElement===$("globalSearch")){$("globalSearch").value="";filterCatalog();$("globalSearch").blur();}});
+  const navLinks=Array.from(document.querySelectorAll(".nav a[href^='#']"));
+  if("IntersectionObserver" in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+entry.target.id));}}),{rootMargin:"-20% 0px -65% 0px"});["overview","toolkit","workflows","utilities","learning","reporting","resources"].forEach(id=>{const el=$(id);if(el)io.observe(el);});}
+})();
+</script>
+</body>
+</html>
