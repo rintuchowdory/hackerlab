@@ -1,0 +1,2 @@
+# HackerLab uses Python's standard library only.
+# External scanner binaries are installed separately (see docs/lab-setup.md).

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.log
+nmap-results.json
+gobuster-results.txt
+wpscan-results.json
+.DS_Store

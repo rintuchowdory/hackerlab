@@ -1,0 +1,22 @@
+services:
+  juice-shop:
+    image: bkimminich/juice-shop
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    networks:
+      - hackerlab-net
+
+  hackerlab:
+    build: .
+    stdin_open: true
+    tty: true
+    depends_on:
+      - juice-shop
+    networks:
+      - hackerlab-net
+    command: ["bash"]
+
+networks:
+  hackerlab-net:
+    driver: bridge

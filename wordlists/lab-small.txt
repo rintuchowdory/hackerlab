@@ -1,0 +1,7 @@
+# Tiny wordlist for local training only
+admin
+login
+assets
+api
+robots.txt
+favicon.ico
