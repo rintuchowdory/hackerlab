@@ -2,7 +2,7 @@
 
 **A beginner-friendly, local-first security learning workspace for Kali Linux, defensive workflows and secure development.**
 
-HackerLab wraps common discovery tools in small Python scripts, explains their results, and demonstrates a secure-coding lesson. The static web dashboard adds a curated directory of security tools, guided workflows, browser-side utilities, learning progress and a Markdown finding-report draft.
+HackerLab wraps common discovery tools in small Python scripts, explains their results, and demonstrates a secure-coding lesson. The static web dashboard adds a curated directory of security tools, guided workflows, offline scanner-output analyzers, browser-side utilities, XP-based learning progress, a saved finding library and a Markdown finding-report draft.
 
 > **Scope and safety:** The network wrappers resolve the target and reject public/non-lab IP addresses. They are not designed for scanning arbitrary Internet hosts. Only assess systems you own or have explicit written permission to test. The GitHub Actions workflow runs unit tests only; it does not run network scans.
 
@@ -22,11 +22,13 @@ HackerLab wraps common discovery tools in small Python scripts, explains their r
 
 - Searchable tool directory with six categories: network, web/API, code and supply chain, cloud and containers, defence and response, and learning.
 - Guided workflows for asset discovery, web application review, secure code release, and defensive investigation.
-- Six browser-side utilities: secure password generation, SHA-256 hashing, JSON formatting, URL encoding/decoding, HTTP security-header checklist, and IPv4/CIDR subnet helper.
-- Learning milestones saved in the browser and a Markdown security finding report builder.
+- Offline scanner-output analyzers for Nmap port output, Gobuster/directory paths and raw HTTP responses, each with prioritised observations and a one-click "add to report" action.
+- Eleven browser-side utilities: secure password generation, SHA-256 hashing, JSON formatting, URL encoding/decoding, HTTP security-header checklist, IPv4/CIDR subnet helper, Base64 encoding/decoding, JWT inspection, password-strength/entropy estimation, hash-format identification and a CVSS 3.1 base-score calculator.
+- Learning milestones with XP, levels and badges saved in the browser, a saved finding library, and JSON export/import of progress and findings.
+- Markdown security finding report builder with editable saved findings.
 - Clear labels distinguishing repository tools from external projects and training references.
 
-The dashboard is a static information and utility interface. Its external tool catalogue does not mean those tools are installed or integrated. It does not execute scanners, connect to Kali, or send browser utility inputs to a server. See [docs/dashboard-guide.md](docs/dashboard-guide.md) and [docs/deployment.md](docs/deployment.md).
+The dashboard is a static information and utility interface. Its external tool catalogue does not mean those tools are installed or integrated. It does not execute scanners, connect to Kali, or send pasted output to a server. See [docs/dashboard-guide.md](docs/dashboard-guide.md) and [docs/deployment.md](docs/deployment.md).
 
 ## Repository layout
 

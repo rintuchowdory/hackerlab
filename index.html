@@ -8,10 +8,10 @@
 <title>HackerLab — Security Operations Workspace</title>
 <style>
 :root{color-scheme:dark;--bg:#080d18;--panel:#101827;--panel2:#141f31;--panel3:#19263a;--line:#25354d;--muted:#91a1b8;--text:#edf3ff;--green:#69e5b5;--blue:#83adff;--amber:#f5c36a;--red:#ff858d;--purple:#b6a0ff;--shadow:0 18px 48px rgba(0,0,0,.22);--radius:17px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:radial-gradient(ellipse at 64% -12%,#1b3150 0,transparent 34%),var(--bg);color:var(--text);font:14px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button,input,textarea,select{font:inherit}button{cursor:pointer}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:238px;padding:22px 15px;background:rgba(9,15,27,.96);border-right:1px solid var(--line);display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:11px;padding:4px 8px 25px}.mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--green),var(--blue));display:grid;place-items:center;color:#081321;font-weight:950;font-size:20px;box-shadow:0 8px 26px #63e6b022}.brand strong{display:block;font-size:15px;letter-spacing:.12em}.brand small{display:block;color:var(--muted);font-size:11px}.nav-label{margin:15px 10px 7px;color:#64758d;font-size:10px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}.nav{display:grid;gap:4px}.nav a{display:flex;align-items:center;gap:11px;padding:10px 11px;color:#aab8cc;border:1px solid transparent;border-radius:10px;font-size:13px}.nav a:hover,.nav a.active{background:#18263a;border-color:#293b55;color:#fff;text-decoration:none}.nav-icon{width:21px;text-align:center;font-size:15px;color:var(--green)}.side-bottom{margin-top:auto}.lab-chip{padding:12px;border:1px solid #285448;background:#10251f;border-radius:12px;color:#b5efdc;font-size:11px}.lab-chip b{display:block;color:var(--green);font-size:12px;margin-bottom:3px}.side-foot{padding:14px 8px 0;color:#718098;font-size:10px}.main{margin-left:238px;max-width:1700px;padding:24px 32px 46px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:23px}.crumb{color:var(--muted);font-size:12px}.crumb b{color:var(--text);font-weight:700}.top-actions{display:flex;align-items:center;gap:10px}.search{width:min(330px,36vw);position:relative}.search input{width:100%;background:#101a2a;border:1px solid var(--line);border-radius:10px;padding:10px 38px 10px 35px;color:var(--text);outline:none}.search input:focus,.field:focus,textarea:focus,select:focus{border-color:#5983c8;box-shadow:0 0 0 3px #5585d322;outline:none}.search:before{content:"⌕";position:absolute;left:13px;top:5px;color:#94a6c0;font-size:20px}.keyhint{position:absolute;right:10px;top:9px;color:#6e7f98;font-size:10px;border:1px solid #34445d;border-radius:5px;padding:1px 5px}.top-status{font-size:11px;color:var(--green);border:1px solid #285448;border-radius:999px;padding:7px 11px;background:#10251f;white-space:nowrap}.hero{position:relative;overflow:hidden;border:1px solid #2b4260;border-radius:22px;padding:27px 29px;background:linear-gradient(112deg,#14253b 0%,#111d30 55%,#1a2540 100%);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:22px;margin-bottom:18px}.hero:after{content:"";position:absolute;width:310px;height:310px;border-radius:50%;right:7%;top:-220px;border:1px solid #79a8ff2c;box-shadow:0 0 0 28px #79a8ff08,0 0 0 58px #79a8ff06}.hero-content{position:relative;z-index:1}.eyebrow{color:var(--green);font-size:10px;font-weight:850;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(29px,4vw,43px);line-height:1.08;letter-spacing:-.045em;margin:9px 0 10px}.hero p{max-width:710px;color:#a9b9d0;margin:0;font-size:13px}.hero-actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px;min-width:190px;justify-content:flex-end}.btn{display:inline-flex;justify-content:center;align-items:center;gap:7px;border:1px solid #354966;background:#1b2b42;color:#eaf2ff;padding:9px 13px;border-radius:9px;font-size:12px;font-weight:750}.btn:hover{background:#263b59;text-decoration:none}.btn.primary{background:linear-gradient(135deg,#6ee3b7,#8db5ff);border:0;color:#071522}.btn.primary:hover{filter:brightness(1.06)}.btn.ghost{background:transparent}.btn.small{padding:6px 9px;font-size:11px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 16px;min-width:0}.stat-top{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.stat strong{display:block;font-size:23px;letter-spacing:-.04em;margin:6px 0 0}.stat small{color:#71839d;font-size:10px}.stat-icon{width:29px;height:29px;border-radius:9px;background:#1c3046;display:grid;place-items:center;color:var(--green)}.section{margin:28px 0 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:13px}.section-head h2{font-size:18px;margin:3px 0 0;letter-spacing:-.02em}.section-head p{margin:4px 0 0;color:var(--muted);font-size:11px}.section-kicker{color:var(--blue);font-size:9px;letter-spacing:.16em;font-weight:850;text-transform:uppercase}.layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.85fr);gap:14px}.panel{background:linear-gradient(155deg,#121e30,#101827);border:1px solid var(--line);border-radius:var(--radius);padding:18px;min-width:0}.panel h3{margin:0 0 12px;font-size:14px}.panel-sub{color:var(--muted);font-size:11px;margin:-6px 0 13px}.quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.quick{border:1px solid var(--line);background:var(--panel2);padding:13px;border-radius:12px}.quick .qicon{font-size:19px;margin-bottom:8px}.quick b{display:block;font-size:12px}.quick p{margin:4px 0 10px;color:var(--muted);font-size:10px;min-height:31px}.tag{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:4px 8px;font-size:9px;font-weight:800;background:#1e2b40;color:#b9c9e0}.tag.local{background:#15382e;color:var(--green)}.tag.external{background:#302744;color:#c5b7ff}.tag.guide{background:#3b2e1d;color:var(--amber)}.codebox{position:relative;background:#080e18;border:1px solid #293b55;border-radius:11px;padding:13px;color:#b9f1d9;font:11px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre;overflow:auto}.copy-btn{position:absolute;right:8px;top:8px}.safety{border-left:3px solid var(--amber);border-radius:0 10px 10px 0;background:#2b251b;color:#ead8b4;padding:11px 12px;font-size:11px}.safety b{color:#ffe0a1}.path-list{display:grid;gap:11px}.path-item{display:flex;gap:10px;align-items:flex-start}.check{width:21px;height:21px;flex:0 0 21px;accent-color:#65dfb1;margin-top:1px}.path-item b{display:block;font-size:11px}.path-item span{display:block;color:var(--muted);font-size:10px}.progressbar{height:6px;background:#263449;border-radius:9px;overflow:hidden;margin:12px 0 6px}.progressbar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--blue));transition:width .2s}.progress-copy{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.filterbar{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}.filter{border:1px solid var(--line);background:#101a29;color:#9eafc6;border-radius:999px;padding:7px 11px;font-size:10px;font-weight:750}.filter.active{background:#1a3540;color:var(--green);border-color:#356557}.catalog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.catalog-card{border:1px solid var(--line);background:linear-gradient(150deg,#141f31,#101827);border-radius:13px;padding:14px;min-width:0;display:flex;flex-direction:column;gap:8px}.catalog-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.catalog-icon{width:31px;height:31px;background:#1e3048;border-radius:10px;display:grid;place-items:center;font-size:17px}.catalog-card h3{font-size:12px;margin:0}.catalog-card p{color:var(--muted);font-size:10px;margin:0;flex:1}.catalog-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:2px}.catalog-meta small{font-size:9px;color:#8495ad}.catalog-card[hidden]{display:none}.workflow-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.workflow{border:1px solid var(--line);background:#121e30;border-radius:13px;padding:14px}.workflow .n{font-size:10px;color:var(--green);font-weight:900;letter-spacing:.12em}.workflow h3{font-size:12px;margin:7px 0 5px}.workflow p{color:var(--muted);font-size:10px;margin:0 0 9px}.workflow a{font-size:10px}.utility-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.utility{background:#121e30;border:1px solid var(--line);border-radius:13px;padding:15px;min-width:0}.utility summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px}.utility summary::-webkit-details-marker{display:none}.util-title{display:flex;align-items:center;gap:9px}.util-icon{width:30px;height:30px;display:grid;place-items:center;background:#1e3048;border-radius:9px;font-size:16px}.util-title b{display:block;font-size:12px}.util-title small{display:block;color:var(--muted);font-size:9px}.chevron{color:var(--muted)}.utility-body{border-top:1px solid var(--line);margin-top:13px;padding-top:13px}.field-label{display:block;color:#aab9ce;font-size:10px;font-weight:750;margin:8px 0 5px}.field,textarea,select{width:100%;background:#0b1320;border:1px solid #2a3b55;color:var(--text);border-radius:8px;padding:9px 10px;font-size:11px}.field-row{display:flex;gap:8px;align-items:center}.field-row>*{min-width:0}.field-row .field{flex:1}.utility textarea{min-height:75px;resize:vertical}.output{margin-top:9px;background:#0a111d;border:1px solid #26364c;color:#c4e9d9;padding:10px;border-radius:8px;font:10px/1.6 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;min-height:38px}.options{display:flex;flex-wrap:wrap;gap:9px;margin:8px 0}.options label{font-size:10px;color:#b4c2d5;display:flex;align-items:center;gap:5px}.options input{accent-color:var(--green)}.utility .btn{margin-top:9px}.header-results{display:grid;gap:6px;margin-top:9px}.header-result{display:flex;justify-content:space-between;gap:8px;padding:6px 8px;border-radius:7px;background:#172438;font-size:10px}.header-result.good{color:var(--green)}.header-result.warn{color:var(--amber)}.report-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.report-grid .full{grid-column:1/-1}.resource-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.resource-link{background:#121e30;border:1px solid var(--line);border-radius:11px;padding:12px}.resource-link b{display:block;font-size:11px}.resource-link small{display:block;color:var(--muted);font-size:9px;margin-top:3px}.resource-link:hover{border-color:#4b6890;text-decoration:none}.toast{position:fixed;bottom:20px;right:22px;z-index:10;background:#1a3040;border:1px solid #3c715f;color:#c7f6e2;padding:10px 14px;border-radius:10px;box-shadow:var(--shadow);font-size:11px;opacity:0;transform:translateY(8px);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translateY(0)}.empty{display:none;color:var(--muted);font-size:11px;padding:18px;text-align:center;border:1px dashed var(--line);border-radius:12px}.footer{padding:30px 4px 0;text-align:center;color:#718098;font-size:10px}.muted{color:var(--muted)}.mobile-menu{display:none}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:radial-gradient(ellipse at 64% -12%,#1b3150 0,transparent 34%),var(--bg);color:var(--text);font:14px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button,input,textarea,select{font:inherit}button{cursor:pointer}.app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:238px;padding:22px 15px;background:rgba(9,15,27,.96);border-right:1px solid var(--line);display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:11px;padding:4px 8px 25px}.mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--green),var(--blue));display:grid;place-items:center;color:#081321;font-weight:950;font-size:20px;box-shadow:0 8px 26px #63e6b022}.brand strong{display:block;font-size:15px;letter-spacing:.12em}.brand small{display:block;color:var(--muted);font-size:11px}.nav-label{margin:15px 10px 7px;color:#64758d;font-size:10px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}.nav{display:grid;gap:4px}.nav a{display:flex;align-items:center;gap:11px;padding:10px 11px;color:#aab8cc;border:1px solid transparent;border-radius:10px;font-size:13px}.nav a:hover,.nav a.active{background:#18263a;border-color:#293b55;color:#fff;text-decoration:none}.nav-icon{width:21px;text-align:center;font-size:15px;color:var(--green)}.side-bottom{margin-top:auto}.lab-chip{padding:12px;border:1px solid #285448;background:#10251f;border-radius:12px;color:#b5efdc;font-size:11px}.lab-chip b{display:block;color:var(--green);font-size:12px;margin-bottom:3px}.side-foot{padding:14px 8px 0;color:#718098;font-size:10px}.main{margin-left:238px;max-width:1700px;padding:24px 32px 46px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:23px}.crumb{color:var(--muted);font-size:12px}.crumb b{color:var(--text);font-weight:700}.top-actions{display:flex;align-items:center;gap:10px}.search{width:min(330px,36vw);position:relative}.search input{width:100%;background:#101a2a;border:1px solid var(--line);border-radius:10px;padding:10px 38px 10px 35px;color:var(--text);outline:none}.search input:focus,.field:focus,textarea:focus,select:focus{border-color:#5983c8;box-shadow:0 0 0 3px #5585d322;outline:none}.search:before{content:"⌕";position:absolute;left:13px;top:5px;color:#94a6c0;font-size:20px}.keyhint{position:absolute;right:10px;top:9px;color:#6e7f98;font-size:10px;border:1px solid #34445d;border-radius:5px;padding:1px 5px}.top-status{font-size:11px;color:var(--green);border:1px solid #285448;border-radius:999px;padding:7px 11px;background:#10251f;white-space:nowrap}.hero{position:relative;overflow:hidden;border:1px solid #2b4260;border-radius:22px;padding:27px 29px;background:linear-gradient(112deg,#14253b 0%,#111d30 55%,#1a2540 100%);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:22px;margin-bottom:18px}.hero:after{content:"";position:absolute;width:310px;height:310px;border-radius:50%;right:7%;top:-220px;border:1px solid #79a8ff2c;box-shadow:0 0 0 28px #79a8ff08,0 0 0 58px #79a8ff06}.hero-content{position:relative;z-index:1}.eyebrow{color:var(--green);font-size:10px;font-weight:850;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(29px,4vw,43px);line-height:1.08;letter-spacing:-.045em;margin:9px 0 10px}.hero p{max-width:710px;color:#a9b9d0;margin:0;font-size:13px}.hero-actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px;min-width:190px;justify-content:flex-end}.btn{display:inline-flex;justify-content:center;align-items:center;gap:7px;border:1px solid #354966;background:#1b2b42;color:#eaf2ff;padding:9px 13px;border-radius:9px;font-size:12px;font-weight:750}.btn:hover{background:#263b59;text-decoration:none}.btn.primary{background:linear-gradient(135deg,#6ee3b7,#8db5ff);border:0;color:#071522}.btn.primary:hover{filter:brightness(1.06)}.btn.ghost{background:transparent}.btn.small{padding:6px 9px;font-size:11px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 16px;min-width:0}.stat-top{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.stat strong{display:block;font-size:23px;letter-spacing:-.04em;margin:6px 0 0}.stat small{color:#71839d;font-size:10px}.stat-icon{width:29px;height:29px;border-radius:9px;background:#1c3046;display:grid;place-items:center;color:var(--green)}.section{margin:28px 0 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:13px}.section-head h2{font-size:18px;margin:3px 0 0;letter-spacing:-.02em}.section-head p{margin:4px 0 0;color:var(--muted);font-size:11px}.section-kicker{color:var(--blue);font-size:9px;letter-spacing:.16em;font-weight:850;text-transform:uppercase}.layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.85fr);gap:14px}.panel{background:linear-gradient(155deg,#121e30,#101827);border:1px solid var(--line);border-radius:var(--radius);padding:18px;min-width:0}.panel h3{margin:0 0 12px;font-size:14px}.panel-sub{color:var(--muted);font-size:11px;margin:-6px 0 13px}.quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.quick{border:1px solid var(--line);background:var(--panel2);padding:13px;border-radius:12px}.quick .qicon{font-size:19px;margin-bottom:8px}.quick b{display:block;font-size:12px}.quick p{margin:4px 0 10px;color:var(--muted);font-size:10px;min-height:31px}.tag{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:4px 8px;font-size:9px;font-weight:800;background:#1e2b40;color:#b9c9e0}.tag.local{background:#15382e;color:var(--green)}.tag.external{background:#302744;color:#c5b7ff}.tag.guide{background:#3b2e1d;color:var(--amber)}.codebox{position:relative;background:#080e18;border:1px solid #293b55;border-radius:11px;padding:13px;color:#b9f1d9;font:11px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre;overflow:auto}.copy-btn{position:absolute;right:8px;top:8px}.safety{border-left:3px solid var(--amber);border-radius:0 10px 10px 0;background:#2b251b;color:#ead8b4;padding:11px 12px;font-size:11px}.safety b{color:#ffe0a1}.path-list{display:grid;gap:11px}.path-item{display:flex;gap:10px;align-items:flex-start}.check{width:21px;height:21px;flex:0 0 21px;accent-color:#65dfb1;margin-top:1px}.path-item b{display:block;font-size:11px}.path-item span{display:block;color:var(--muted);font-size:10px}.progressbar{height:6px;background:#263449;border-radius:9px;overflow:hidden;margin:12px 0 6px}.progressbar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--blue));transition:width .2s}.progress-copy{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.filterbar{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}.filter{border:1px solid var(--line);background:#101a29;color:#9eafc6;border-radius:999px;padding:7px 11px;font-size:10px;font-weight:750}.filter.active{background:#1a3540;color:var(--green);border-color:#356557}.catalog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.catalog-card{border:1px solid var(--line);background:linear-gradient(150deg,#141f31,#101827);border-radius:13px;padding:14px;min-width:0;display:flex;flex-direction:column;gap:8px}.catalog-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.catalog-icon{width:31px;height:31px;background:#1e3048;border-radius:10px;display:grid;place-items:center;font-size:17px}.catalog-card h3{font-size:12px;margin:0}.catalog-card p{color:var(--muted);font-size:10px;margin:0;flex:1}.catalog-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:2px}.catalog-meta small{font-size:9px;color:#8495ad}.catalog-card[hidden]{display:none}.workflow-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.workflow{border:1px solid var(--line);background:#121e30;border-radius:13px;padding:14px}.workflow .n{font-size:10px;color:var(--green);font-weight:900;letter-spacing:.12em}.workflow h3{font-size:12px;margin:7px 0 5px}.workflow p{color:var(--muted);font-size:10px;margin:0 0 9px}.workflow a{font-size:10px}.utility-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.utility{background:#121e30;border:1px solid var(--line);border-radius:13px;padding:15px;min-width:0}.utility summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px}.utility summary::-webkit-details-marker{display:none}.util-title{display:flex;align-items:center;gap:9px}.util-icon{width:30px;height:30px;display:grid;place-items:center;background:#1e3048;border-radius:9px;font-size:16px}.util-title b{display:block;font-size:12px}.util-title small{display:block;color:var(--muted);font-size:9px}.chevron{color:var(--muted)}.utility-body{border-top:1px solid var(--line);margin-top:13px;padding-top:13px}.field-label{display:block;color:#aab9ce;font-size:10px;font-weight:750;margin:8px 0 5px}.field,textarea,select{width:100%;background:#0b1320;border:1px solid #2a3b55;color:var(--text);border-radius:8px;padding:9px 10px;font-size:11px}.field-row{display:flex;gap:8px;align-items:center}.field-row>*{min-width:0}.field-row .field{flex:1}.utility textarea{min-height:75px;resize:vertical}.output{margin-top:9px;background:#0a111d;border:1px solid #26364c;color:#c4e9d9;padding:10px;border-radius:8px;font:10px/1.6 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;min-height:38px}.options{display:flex;flex-wrap:wrap;gap:9px;margin:8px 0}.options label{font-size:10px;color:#b4c2d5;display:flex;align-items:center;gap:5px}.options input{accent-color:var(--green)}.utility .btn{margin-top:9px}.header-results{display:grid;gap:6px;margin-top:9px}.header-result{display:flex;justify-content:space-between;gap:8px;padding:6px 8px;border-radius:7px;background:#172438;font-size:10px}.header-result.good{color:var(--green)}.header-result.warn{color:var(--amber)}.report-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.analyzer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}.analyzer{background:#121e30;border:1px solid var(--line);border-radius:13px;padding:15px;min-width:0;display:flex;flex-direction:column;gap:8px}.analyzer h3{margin:0;font-size:13px}.analyzer .panel-sub{margin:0}.analyzer textarea{min-height:104px}.analyzer-actions{display:flex;flex-wrap:wrap;gap:6px}.result-list{display:grid;gap:6px}.result-row{display:flex;gap:8px;align-items:flex-start;justify-content:space-between;background:#0a111d;border:1px solid #26364c;border-radius:8px;padding:8px 9px;font-size:10px;color:#c9d8ea}.result-row b{display:block;font-size:10px;color:#fff}.result-row small{display:block;color:var(--muted);font-size:9px;margin-top:2px}.sev{display:inline-flex;border-radius:999px;padding:2px 7px;font-size:8px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}.sev.critical{background:#4a1d24;color:#ff9aa2}.sev.high{background:#472a1c;color:#ffb787}.sev.medium{background:#43391c;color:#f5d488}.sev.low{background:#1d3a33;color:#8fe3c3}.sev.info{background:#1e2b40;color:#b9c9e0}.summary-line{color:var(--muted);font-size:10px;margin:0}.gamify{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:12px 0 4px}.gamify-card{background:#0d1726;border:1px solid var(--line);border-radius:10px;padding:10px}.gamify-card b{display:block;font-size:15px}.gamify-card small{color:var(--muted);font-size:9px}.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.badge{border:1px solid #2b3d55;border-radius:999px;padding:4px 9px;font-size:9px;color:#7d8ea6;background:#0d1726}.badge.on{border-color:#356557;background:#15382e;color:var(--green)}.finding-list{display:grid;gap:8px;margin-top:12px}.finding-item{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;border:1px solid var(--line);background:#0d1726;border-radius:10px;padding:10px 11px}.finding-item b{font-size:11px;display:block}.finding-item small{color:var(--muted);font-size:9px}.finding-actions{display:flex;gap:5px;flex-shrink:0}.empty{color:var(--muted);font-size:10px;border:1px dashed #2b3d55;border-radius:10px;padding:12px;text-align:center;margin:0}.backup-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.report-grid .full{grid-column:1/-1}.resource-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.resource-link{background:#121e30;border:1px solid var(--line);border-radius:11px;padding:12px}.resource-link b{display:block;font-size:11px}.resource-link small{display:block;color:var(--muted);font-size:9px;margin-top:3px}.resource-link:hover{border-color:#4b6890;text-decoration:none}.toast{position:fixed;bottom:20px;right:22px;z-index:10;background:#1a3040;border:1px solid #3c715f;color:#c7f6e2;padding:10px 14px;border-radius:10px;box-shadow:var(--shadow);font-size:11px;opacity:0;transform:translateY(8px);transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translateY(0)}.empty{display:none;color:var(--muted);font-size:11px;padding:18px;text-align:center;border:1px dashed var(--line);border-radius:12px}.footer{padding:30px 4px 0;text-align:center;color:#718098;font-size:10px}.muted{color:var(--muted)}.mobile-menu{display:none}
 @media(max-width:1120px){.main{padding:22px}.catalog{grid-template-columns:repeat(2,minmax(0,1fr))}.workflow-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.resource-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:820px){.sidebar{width:66px;padding:16px 8px}.brand{padding:4px 5px 22px}.brand>div:last-child,.nav-label,.nav a span:last-child,.lab-chip,.side-foot{display:none}.brand .mark{width:42px;height:42px}.nav a{justify-content:center;padding:11px 5px}.nav-icon{width:auto;font-size:17px}.main{margin-left:66px;padding:18px}.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.main{padding:13px}.topbar{align-items:flex-start;flex-direction:column}.top-actions{width:100%}.search{width:100%}.top-status{display:none}.hero{display:block;padding:21px}.hero-actions{justify-content:flex-start;margin-top:17px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:20px}.catalog,.utility-grid{grid-template-columns:1fr}.workflow-grid{grid-template-columns:1fr 1fr}.quick-grid{grid-template-columns:1fr}.resource-links{grid-template-columns:1fr 1fr}.section-head{align-items:flex-start;flex-direction:column}.report-grid{grid-template-columns:1fr}.report-grid .full{grid-column:auto}}
+@media(max-width:560px){.main{padding:13px}.topbar{align-items:flex-start;flex-direction:column}.top-actions{width:100%}.search{width:100%}.top-status{display:none}.hero{display:block;padding:21px}.hero-actions{justify-content:flex-start;margin-top:17px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:20px}.catalog,.utility-grid{grid-template-columns:1fr}.workflow-grid{grid-template-columns:1fr 1fr}.quick-grid{grid-template-columns:1fr}.resource-links{grid-template-columns:1fr 1fr}.section-head{align-items:flex-start;flex-direction:column}.report-grid{grid-template-columns:1fr}.report-grid .full{grid-column:auto}.gamify{grid-template-columns:1fr 1fr}.finding-item{flex-direction:column}.finding-actions{width:100%}}
 </style>
 </head>
 <body>
@@ -23,6 +23,7 @@
     <a class="active" href="#overview"><span class="nav-icon">⌂</span><span>Overview</span></a>
     <a href="#toolkit"><span class="nav-icon">⌘</span><span>Tool directory</span></a>
     <a href="#workflows"><span class="nav-icon">▤</span><span>Security workflows</span></a>
+    <a href="#analyzers"><span class="nav-icon">⌗</span><span>Output analyzers</span></a>
     <a href="#utilities"><span class="nav-icon">⚙</span><span>Digital utilities</span></a>
     <a href="#learning"><span class="nav-icon">◈</span><span>Learning tracks</span></a>
     <a href="#reporting"><span class="nav-icon">▧</span><span>Report builder</span></a>
@@ -34,7 +35,7 @@
   </nav>
   <div class="side-bottom">
     <div class="lab-chip"><b>● LOCAL-FIRST MODE</b>Browser tools run on this device. Scanner workloads stay in your private lab.</div>
-    <div class="side-foot">HackerLab · v0.3 workspace</div>
+    <div class="side-foot">HackerLab · v0.4 workspace</div>
   </div>
 </aside>
 <main class="main">
@@ -55,13 +56,14 @@
     <div class="hero-actions">
       <a class="btn primary" href="#toolkit">Explore tool directory ↗</a>
       <a class="btn ghost" href="#utilities">Open digital utilities</a>
+      <a class="btn ghost" href="#analyzers">Analyze scanner output</a>
     </div>
   </section>
 
   <section class="stats" aria-label="Workspace summary">
     <article class="stat"><div class="stat-top"><span>Local lab scripts</span><span class="stat-icon">⌘</span></div><strong>05</strong><small>Nmap, Gobuster, WPScan, SQL demo, guard</small></article>
     <article class="stat"><div class="stat-top"><span>Tool categories</span><span class="stat-icon">▦</span></div><strong>06</strong><small>Network, web, code, cloud, defence, learning</small></article>
-    <article class="stat"><div class="stat-top"><span>Browser utilities</span><span class="stat-icon">⚙</span></div><strong>06</strong><small>Runs locally in this browser session</small></article>
+    <article class="stat"><div class="stat-top"><span>Browser utilities</span><span class="stat-icon">⚙</span></div><strong>11</strong><small>Password, JWT, CVSS, hashing and more</small></article>
     <article class="stat"><div class="stat-top"><span>Execution boundary</span><span class="stat-icon">⌑</span></div><strong style="font-size:19px;color:var(--green)">Private lab</strong><small>No public scanning or remote shell</small></article>
   </section>
 
@@ -128,6 +130,34 @@ docker compose run --rm hackerlab<button class="btn small copy-btn" id="copyAll"
     </div>
   </section>
 
+  <section class="section" id="analyzers">
+    <div class="section-head"><div><div class="section-kicker">Local analysis</div><h2>Scanner output analyzers</h2><p>Paste output you already collected in your lab. Parsing happens in this browser; nothing is uploaded or executed.</p></div><span class="tag local">OFFLINE TRIAGE</span></div>
+    <div class="analyzer-grid">
+      <article class="analyzer">
+        <h3>Nmap port scan</h3>
+        <p class="panel-sub">Turn port lines into an exposure summary with prioritised next steps.</p>
+        <textarea id="nmapInput" placeholder="22/tcp open ssh OpenSSH 8.9p1&#10;80/tcp open http nginx 1.18.0&#10;3306/tcp open mysql MySQL 8.0.32"></textarea>
+        <div class="analyzer-actions"><button class="btn primary small" id="analyzeNmap">Analyze ports</button><button class="btn small" id="nmapToReport">Add to report</button></div>
+        <div class="result-list" id="nmapOutput" aria-live="polite"><p class="empty">Paste Nmap output to see open ports and risky services.</p></div>
+      </article>
+      <article class="analyzer">
+        <h3>Gobuster / directory paths</h3>
+        <p class="panel-sub">Group discovered paths by status and surface sensitive names.</p>
+        <textarea id="gobusterInput" placeholder="/admin (Status: 301)&#10;/api (Status: 200) [Size: 421]&#10;/.git (Status: 403)"></textarea>
+        <div class="analyzer-actions"><button class="btn primary small" id="analyzeGobuster">Analyze paths</button><button class="btn small" id="gobusterToReport">Add to report</button></div>
+        <div class="result-list" id="gobusterOutput" aria-live="polite"><p class="empty">Paste directory-discovery output to review exposed paths.</p></div>
+      </article>
+      <article class="analyzer">
+        <h3>HTTP response</h3>
+        <p class="panel-sub">Review status, banner headers, cookies and redirects from a raw response.</p>
+        <textarea id="httpInput" placeholder="HTTP/1.1 200 OK&#10;Server: nginx/1.18.0&#10;Set-Cookie: session=abc; Path=/&#10;Content-Type: text/html"></textarea>
+        <div class="analyzer-actions"><button class="btn primary small" id="analyzeHttp">Analyze response</button><button class="btn small" id="httpToReport">Add to report</button></div>
+        <div class="result-list" id="httpOutput" aria-live="polite"><p class="empty">Paste response headers to check browser-facing controls.</p></div>
+      </article>
+    </div>
+    <p class="muted" style="font-size:10px;margin:10px 0 0">Analyzers are heuristics for learning, not a vulnerability verdict. Confirm every observation in your authorised lab before recording it.</p>
+  </section>
+
   <section class="section" id="utilities">
     <div class="section-head"><div><div class="section-kicker">Built-in digital tools</div><h2>Browser utilities</h2><p>These tools process inputs in your browser. Nothing is uploaded by this page. Do not paste real secrets into shared devices.</p></div><span class="tag local">CLIENT-SIDE</span></div>
     <div class="utility-grid">
@@ -176,13 +206,76 @@ docker compose run --rm hackerlab<button class="btn small copy-btn" id="copyAll"
           <button class="btn primary small" id="calcSubnet">Calculate subnet</button><div class="output" id="subnetOutput">Network details appear here.</div><p class="muted" style="font-size:9px">For learning and planning private lab networks; confirm routing and address allocations before making network changes.</p>
         </div>
       </details>
+
+      <details class="utility">
+        <summary><span class="util-title"><span class="util-icon">64</span><span><b>Base64 encoder / decoder</b><small>Encode or decode UTF-8 text locally</small></span></span><span class="chevron">＋</span></summary>
+        <div class="utility-body">
+          <label class="field-label" for="b64Input">Input text</label><textarea id="b64Input" placeholder="Text or Base64 value…"></textarea>
+          <div class="field-row"><button class="btn small" id="b64Encode">Encode</button><button class="btn small" id="b64Decode">Decode</button><button class="btn small" id="copyB64">Copy result</button></div>
+          <div class="output" id="b64Output" aria-live="polite">Result appears here.</div>
+        </div>
+      </details>
+
+      <details class="utility">
+        <summary><span class="util-title"><span class="util-icon">◫</span><span><b>JWT inspector</b><small>Decode header, payload and expiry</small></span></span><span class="chevron">＋</span></summary>
+        <div class="utility-body">
+          <label class="field-label" for="jwtInput">JWT token</label><textarea id="jwtInput" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9…"></textarea>
+          <button class="btn primary small" id="inspectJwt">Inspect token</button>
+          <div class="output" id="jwtOutput" aria-live="polite">Decoded header and payload appear here. Signature is not verified.</div>
+          <p class="muted" style="font-size:9px">Decoding is not validation. Never paste production tokens into a shared device.</p>
+        </div>
+      </details>
+
+      <details class="utility">
+        <summary><span class="util-title"><span class="util-icon">◐</span><span><b>Password strength meter</b><small>Estimate entropy and spot weak patterns</small></span></span><span class="chevron">＋</span></summary>
+        <div class="utility-body">
+          <label class="field-label" for="strengthInput">Candidate password</label><input class="field" id="strengthInput" type="text" autocomplete="off" placeholder="Type a candidate password…">
+          <button class="btn primary small" id="checkStrength">Check strength</button>
+          <div class="output" id="strengthOutput" aria-live="polite">Strength estimate appears here.</div>
+          <p class="muted" style="font-size:9px">Entropy assumes random generation; human-chosen passwords are usually weaker than the estimate.</p>
+        </div>
+      </details>
+
+      <details class="utility">
+        <summary><span class="util-title"><span class="util-icon">#?</span><span><b>Hash identifier</b><small>Guess common hash formats offline</small></span></span><span class="chevron">＋</span></summary>
+        <div class="utility-body">
+          <label class="field-label" for="hashIdInput">Hash value</label><textarea id="hashIdInput" placeholder="Paste a hash or password-hash string…"></textarea>
+          <button class="btn primary small" id="identifyHash">Identify format</button>
+          <div class="output" id="hashIdOutput" aria-live="polite">Possible formats appear here.</div>
+        </div>
+      </details>
+
+      <details class="utility">
+        <summary><span class="util-title"><span class="util-icon">◎</span><span><b>CVSS 3.1 calculator</b><small>Score a finding from its base metrics</small></span></span><span class="chevron">＋</span></summary>
+        <div class="utility-body">
+          <div class="report-grid" style="gap:7px">
+            <div><label class="field-label" for="cvssAV">Attack vector</label><select class="field" id="cvssAV"><option value="N">Network (N)</option><option value="A">Adjacent (A)</option><option value="L">Local (L)</option><option value="P">Physical (P)</option></select></div>
+            <div><label class="field-label" for="cvssAC">Attack complexity</label><select class="field" id="cvssAC"><option value="L">Low (L)</option><option value="H">High (H)</option></select></div>
+            <div><label class="field-label" for="cvssPR">Privileges required</label><select class="field" id="cvssPR"><option value="N">None (N)</option><option value="L">Low (L)</option><option value="H">High (H)</option></select></div>
+            <div><label class="field-label" for="cvssUI">User interaction</label><select class="field" id="cvssUI"><option value="N">None (N)</option><option value="R">Required (R)</option></select></div>
+            <div><label class="field-label" for="cvssS">Scope</label><select class="field" id="cvssS"><option value="U">Unchanged (U)</option><option value="C">Changed (C)</option></select></div>
+            <div><label class="field-label" for="cvssC">Confidentiality</label><select class="field" id="cvssC"><option value="H">High (H)</option><option value="L">Low (L)</option><option value="N">None (N)</option></select></div>
+            <div><label class="field-label" for="cvssI">Integrity</label><select class="field" id="cvssI"><option value="H">High (H)</option><option value="L">Low (L)</option><option value="N">None (N)</option></select></div>
+            <div><label class="field-label" for="cvssA">Availability</label><select class="field" id="cvssA"><option value="H">High (H)</option><option value="L">Low (L)</option><option value="N">None (N)</option></select></div>
+          </div>
+          <div class="field-row" style="margin-top:8px"><button class="btn primary small" id="calcCvss">Calculate CVSS 3.1</button><button class="btn small" id="cvssToReport">Send score to report</button></div>
+          <div class="output" id="cvssOutput" aria-live="polite">Vector and base score appear here.</div>
+          <p class="muted" style="font-size:9px">Base score only; temporal and environmental metrics are not included. Confirm the rating against the FIRST specification.</p>
+        </div>
+      </details>
     </div>
   </section>
 
   <section class="section" id="learning">
-    <div class="section-head"><div><div class="section-kicker">Personal progress</div><h2>Learning tracks</h2><p>Tick off milestones as you complete each lab. Progress is stored only in this browser.</p></div><button class="btn small ghost" id="resetProgress">Reset progress</button></div>
+    <div class="section-head"><div><div class="section-kicker">Personal progress</div><h2>Learning tracks</h2><p>Tick off milestones to earn XP and badges. Progress is stored only in this browser.</p></div><button class="btn small ghost" id="resetProgress">Reset progress</button></div>
     <div class="panel">
-      <div class="progress-copy"><span id="progressText">0 of 6 milestones complete</span><span id="progressPct">0%</span></div><div class="progressbar"><span id="progressFill"></span></div>
+      <div class="progress-copy"><span id="progressText">0 of 10 milestones complete</span><span id="progressPct">0%</span></div><div class="progressbar"><span id="progressFill"></span></div>
+      <div class="gamify">
+        <div class="gamify-card"><b id="xpValue">0 XP</b><small id="levelValue">Level 1 · Foundation</small></div>
+        <div class="gamify-card"><b id="badgeCount">0 / 5</b><small>Badges unlocked</small></div>
+        <div class="gamify-card"><b id="nextBadge">First steps</b><small id="nextBadgeHint">Next badge · 1 milestone</small></div>
+      </div>
+      <div class="badges" id="badgeList"></div>
       <div class="path-list" id="progressList">
         <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="lab"><span><b>1. Build the isolated Docker lab</b><span>Start Juice Shop and open a toolbox shell using the lab guide.</span></span></label>
         <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="network"><span><b>2. Understand private network discovery</b><span>Run the supplied Nmap wrapper against the Juice Shop service only.</span></span></label>
@@ -190,12 +283,16 @@ docker compose run --rm hackerlab<button class="btn small copy-btn" id="copyAll"
         <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="code"><span><b>4. Practise secure coding</b><span>Run the SQLite parameterisation demo and compare the safe query.</span></span></label>
         <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="supply"><span><b>5. Add code and dependency checks</b><span>Explore source analysis, secret detection and software composition analysis.</span></span></label>
         <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="report"><span><b>6. Write a concise security finding</b><span>Record evidence, severity, impact and remediation in the report builder.</span></span></label>
+        <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="analyze"><span><b>7. Analyze scanner output</b><span>Paste lab Nmap, Gobuster or HTTP output into an analyzer and review the findings.</span></span></label>
+        <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="cvss"><span><b>8. Score a finding with CVSS</b><span>Build a CVSS 3.1 vector and send the severity to the report builder.</span></span></label>
+        <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="library"><span><b>9. Save a finding to the library</b><span>Store a structured finding so you can revisit and export it.</span></span></label>
+        <label class="path-item"><input class="check progress-check" type="checkbox" data-progress="backup"><span><b>10. Export your workspace</b><span>Download a JSON backup of your progress and saved findings.</span></span></label>
       </div>
     </div>
   </section>
 
   <section class="section" id="reporting">
-    <div class="section-head"><div><div class="section-kicker">Documentation toolkit</div><h2>Security finding report builder</h2><p>Create a structured Markdown draft for your own lab notes. Review and sanitise evidence before sharing.</p></div></div>
+    <div class="section-head"><div><div class="section-kicker">Documentation toolkit</div><h2>Security finding report builder</h2><p>Create a structured Markdown draft and save findings to a local library. Review and sanitise evidence before sharing.</p></div></div>
     <div class="panel">
       <div class="report-grid">
         <div><label class="field-label" for="findingTitle">Finding title</label><input class="field" id="findingTitle" placeholder="e.g. Missing security response header"></div>
@@ -205,8 +302,17 @@ docker compose run --rm hackerlab<button class="btn small copy-btn" id="copyAll"
         <div class="full"><label class="field-label" for="findingEvidence">Evidence (remove credentials and personal data)</label><textarea id="findingEvidence" placeholder="Record a minimal, reproducible observation…"></textarea></div>
         <div class="full"><label class="field-label" for="findingFix">Recommended remediation</label><textarea id="findingFix" placeholder="Describe a practical defensive fix and how to verify it…"></textarea></div>
       </div>
-      <button class="btn primary small" id="buildReport">Generate Markdown report</button><button class="btn small" id="copyReport">Copy report</button>
+      <div class="field-row" style="margin-top:10px;flex-wrap:wrap"><button class="btn small" id="buildReport">Generate Markdown report</button><button class="btn small" id="copyReport">Copy report</button><button class="btn primary small" id="saveFinding">Save finding</button><button class="btn small ghost" id="clearFinding">New finding</button></div>
       <div class="output" id="reportOutput" style="min-height:110px;margin-top:12px">Your report draft will appear here.</div>
+      <h3 style="margin:18px 0 6px">Saved findings <span class="tag local" id="findingCount">0 SAVED</span></h3>
+      <p class="panel-sub" style="margin:0">Stored in this browser only. Load an entry to edit it, or export a backup below.</p>
+      <div class="finding-list" id="findingList"><p class="empty">No saved findings yet. Save a finding to build your library.</p></div>
+    </div>
+    <div class="panel" style="margin-top:12px">
+      <div class="section-head"><div><div class="section-kicker">Portability</div><h3 style="margin:0;font-size:14px">Workspace backup &amp; restore</h3><p>Move learning progress and saved findings between browsers as JSON.</p></div><span class="tag local">LOCAL FILE</span></div>
+      <div class="field-row" style="flex-wrap:wrap"><button class="btn small" id="exportWorkspace">Export JSON</button><button class="btn small" id="importWorkspace">Import pasted JSON</button></div>
+      <textarea id="workspaceJson" placeholder="Export to fill this box, or paste a previous backup here…" style="margin-top:9px"></textarea>
+      <p class="muted" style="font-size:9px">Import replaces the progress and findings stored in this browser. Review the JSON before importing.</p>
     </div>
   </section>
 
@@ -290,10 +396,262 @@ docker compose run --rm hackerlab<button class="btn small copy-btn" id="copyAll"
       $("subnetOutput").textContent=lines.join("\n");
     }catch(e){$("subnetOutput").textContent=e.message;}
   });
+  function esc(value){return String(value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));}
+  function sevLabel(sev){return sev==="info"?"Informational":sev.charAt(0).toUpperCase()+sev.slice(1);}
+  function topSeverity(list){const order=["critical","high","medium","low","info"];return order.find(s=>list.includes(s))||"info";}
+  function renderResults(id,summary,rows){
+    $(id).innerHTML='<p class="summary-line">'+esc(summary)+'</p>'+rows.map(r=>'<div class="result-row"><div><b>'+esc(r.title)+'</b><small>'+esc(r.detail)+'</small></div><span class="sev '+r.sev+'">'+r.sev+'</span></div>').join("");
+  }
+  function addToReport(finding){
+    if(finding.title)$("findingTitle").value=finding.title;
+    if(finding.severity)$("findingSeverity").value=finding.severity;
+    if(finding.asset)$("findingAsset").value=finding.asset;
+    if(finding.summary)$("findingSummary").value=finding.summary;
+    if(finding.evidence)$("findingEvidence").value=finding.evidence;
+    if(finding.fix)$("findingFix").value=finding.fix;
+    $("reporting").scrollIntoView({behavior:"smooth",block:"start"});
+    toast("Report form filled — review before saving.");
+  }
+
+  const FINDINGS_KEY="hackerlab-findings-v1";
+  let findings=[];let editingId=null;
+  try{const stored=JSON.parse(localStorage.getItem(FINDINGS_KEY)||"[]");if(Array.isArray(stored))findings=stored;}catch(e){findings=[];}
+  function persistFindings(){try{localStorage.setItem(FINDINGS_KEY,JSON.stringify(findings));}catch(e){}}
+  function readFindingForm(){return {title:$("findingTitle").value.trim(),severity:$("findingSeverity").value,asset:$("findingAsset").value.trim(),summary:$("findingSummary").value.trim(),evidence:$("findingEvidence").value.trim(),fix:$("findingFix").value.trim()};}
+  function renderFindings(){
+    $("findingCount").textContent=findings.length+" SAVED";
+    if(!findings.length){$("findingList").innerHTML='<p class="empty">No saved findings yet. Save a finding to build your library.</p>';return;}
+    $("findingList").innerHTML=findings.map(f=>{
+      const sev=(f.severity||"Medium").toLowerCase()==="informational"?"info":(f.severity||"Medium").toLowerCase();
+      const when=f.created?new Date(f.created).toLocaleDateString():"";
+      return '<div class="finding-item"><div><b>'+esc(f.title||"Untitled finding")+'</b><small>'+esc(when)+(f.asset?" · "+esc(f.asset):"")+'</small></div><div class="finding-actions"><span class="sev '+sev+'">'+esc(f.severity||"Medium")+'</span><button class="btn small" data-load="'+esc(f.id)+'">Load</button><button class="btn small ghost" data-del="'+esc(f.id)+'">Delete</button></div></div>';
+    }).join("");
+  }
+  renderFindings();
+  $("saveFinding").addEventListener("click",()=>{
+    const finding=readFindingForm();
+    if(!finding.title){toast("Add a finding title before saving.");return;}
+    if(editingId){
+      const index=findings.findIndex(x=>x.id===editingId);
+      if(index>=0){finding.id=editingId;finding.created=findings[index].created||new Date().toISOString();findings[index]=finding;}
+      else{finding.id=Date.now().toString(36)+Math.random().toString(36).slice(2,7);finding.created=new Date().toISOString();findings.unshift(finding);}
+    }else{finding.id=Date.now().toString(36)+Math.random().toString(36).slice(2,7);finding.created=new Date().toISOString();findings.unshift(finding);}
+    editingId=finding.id;persistFindings();renderFindings();toast("Finding saved in this browser.");
+  });
+  $("findingList").addEventListener("click",event=>{
+    const button=event.target.closest("button");if(!button)return;
+    const loadId=button.dataset.load,deleteId=button.dataset.del;
+    if(deleteId){findings=findings.filter(x=>x.id!==deleteId);if(editingId===deleteId)editingId=null;persistFindings();renderFindings();toast("Finding deleted.");return;}
+    if(loadId){
+      const finding=findings.find(x=>x.id===loadId);if(!finding)return;
+      $("findingTitle").value=finding.title||"";$("findingSeverity").value=finding.severity||"Medium";$("findingAsset").value=finding.asset||"";$("findingSummary").value=finding.summary||"";$("findingEvidence").value=finding.evidence||"";$("findingFix").value=finding.fix||"";
+      editingId=finding.id;$("reporting").scrollIntoView({behavior:"smooth",block:"start"});toast("Finding loaded into the editor.");
+    }
+  });
+  $("clearFinding").addEventListener("click",()=>{
+    editingId=null;["findingTitle","findingAsset","findingSummary","findingEvidence","findingFix"].forEach(id=>{$(id).value="";});$("findingSeverity").value="Medium";$("reportOutput").textContent="Your report draft will appear here.";toast("Editor cleared for a new finding.");
+  });
+  function checkedProgress(){return Array.from(document.querySelectorAll(".progress-check")).filter(x=>x.checked).map(x=>x.dataset.progress);}
+  $("exportWorkspace").addEventListener("click",()=>{
+    const payload={app:"HackerLab",version:1,exportedAt:new Date().toISOString(),progress:checkedProgress(),findings};
+    const json=JSON.stringify(payload,null,2);$("workspaceJson").value=json;
+    try{const blob=new Blob([json],{type:"application/json"});const url=URL.createObjectURL(blob);const link=document.createElement("a");link.href=url;link.download="hackerlab-workspace.json";document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}catch(e){}
+    toast("Workspace JSON ready to copy or download.");
+  });
+  $("importWorkspace").addEventListener("click",()=>{
+    try{
+      const data=JSON.parse($("workspaceJson").value);
+      if(!data||typeof data!=="object"||!Array.isArray(data.progress)||!Array.isArray(data.findings))throw new Error("expected progress and findings arrays");
+      const progress=data.progress.filter(x=>typeof x==="string");
+      const severities=["Informational","Low","Medium","High","Critical"];
+      const imported=data.findings.filter(f=>f&&typeof f==="object"&&typeof f.title==="string").map(f=>({id:String(f.id||Date.now().toString(36)+Math.random().toString(36).slice(2,7)),title:f.title,severity:severities.includes(f.severity)?f.severity:"Medium",asset:String(f.asset||""),summary:String(f.summary||""),evidence:String(f.evidence||""),fix:String(f.fix||""),created:f.created||new Date().toISOString()}));
+      localStorage.setItem("hackerlab-progress-v2",JSON.stringify(progress));
+      findings=imported;persistFindings();
+      document.querySelectorAll(".progress-check").forEach(x=>{x.checked=progress.includes(x.dataset.progress);});
+      updateProgress();editingId=null;renderFindings();
+      toast("Imported "+progress.length+" progress items and "+findings.length+" findings.");
+    }catch(e){toast("Import failed: "+e.message);}
+  });
+
+  const BADGES=[{label:"First steps",need:1,desc:"Complete your first milestone"},{label:"Recon ready",need:3,desc:"Complete three milestones"},{label:"Output analyst",need:5,desc:"Complete five milestones"},{label:"Report writer",need:7,desc:"Complete seven milestones"},{label:"Track complete",need:10,desc:"Complete all ten milestones"}];
+  const LEVELS=["Foundation","Explorer","Analyst","Responder","Operator"];
+  function updateGamification(count){
+    const xp=count*50;const level=Math.min(5,1+Math.floor(xp/125));
+    $("xpValue").textContent=xp+" XP";$("levelValue").textContent="Level "+level+" · "+LEVELS[level-1];
+    const unlocked=BADGES.filter(b=>count>=b.need);
+    $("badgeCount").textContent=unlocked.length+" / "+BADGES.length;
+    const next=BADGES.find(b=>count<b.need);
+    $("nextBadge").textContent=next?next.label:"All unlocked";
+    $("nextBadgeHint").textContent=next?("Next badge · "+(next.need-count)+" milestone"+(next.need-count===1?"":"s")):"Every badge earned";
+    $("badgeList").innerHTML=BADGES.map(b=>'<span class="badge'+(count>=b.need?" on":"")+'" title="'+esc(b.desc)+'">'+(count>=b.need?"✓ ":"🔒 ")+esc(b.label)+'</span>').join("");
+  }
+
+  function base64Encode(text){const bytes=new TextEncoder().encode(text);let binary="";bytes.forEach(b=>{binary+=String.fromCharCode(b);});return btoa(binary);}
+  function base64Decode(text){let clean=text.trim().replace(/\s+/g,"").replace(/-/g,"+").replace(/_/g,"/");while(clean.length%4)clean+="=";const binary=atob(clean);const bytes=Uint8Array.from(binary,ch=>ch.charCodeAt(0));return new TextDecoder().decode(bytes);}
+  $("b64Encode").addEventListener("click",()=>{$("b64Output").textContent=base64Encode($("b64Input").value);});
+  $("b64Decode").addEventListener("click",()=>{try{$("b64Output").textContent=base64Decode($("b64Input").value);}catch(e){$("b64Output").textContent="Not valid Base64: "+e.message;}});
+  $("copyB64").addEventListener("click",()=>copyText($("b64Output").textContent,"Base64 result copied."));
+
+  function humanDuration(ms){const mins=Math.round(ms/60000);if(mins<60)return mins+" min";const hours=Math.round(mins/60);if(hours<48)return hours+" h";return Math.round(hours/24)+" days";}
+  function decodeBase64Url(part){let clean=part.replace(/-/g,"+").replace(/_/g,"/");while(clean.length%4)clean+="=";const binary=atob(clean);const bytes=Uint8Array.from(binary,ch=>ch.charCodeAt(0));return new TextDecoder().decode(bytes);}
+  $("inspectJwt").addEventListener("click",()=>{
+    const token=$("jwtInput").value.trim();const parts=token.split(".");
+    if(parts.length<2){$("jwtOutput").textContent="Not a JWT: expected header.payload.signature.";return;}
+    try{
+      const header=JSON.parse(decodeBase64Url(parts[0]));const payload=JSON.parse(decodeBase64Url(parts[1]));
+      const lines=["Header:",JSON.stringify(header,null,2),"","Payload:",JSON.stringify(payload,null,2),"","Algorithm: "+(header.alg||"not declared")];
+      if(payload.exp){const exp=new Date(payload.exp*1000);const diff=payload.exp*1000-Date.now();lines.push("Expires: "+exp.toISOString()+" ("+(diff>0?"in "+humanDuration(diff):"expired "+humanDuration(-diff)+" ago")+")");}else lines.push("Expires: no exp claim");
+      if(payload.iat)lines.push("Issued: "+new Date(payload.iat*1000).toISOString());
+      lines.push("","Note: signature is not verified. Decoding only.");
+      if(String(header.alg).toLowerCase()==="none")lines.push("Warning: alg is none — never accept unsigned tokens.");
+      $("jwtOutput").textContent=lines.join("\n");
+    }catch(e){$("jwtOutput").textContent="Could not decode token: "+e.message;}
+  });
+
+  function humanTime(seconds){if(!isFinite(seconds))return "practically infeasible";if(seconds<1)return "under a second";if(seconds<60)return Math.round(seconds)+" seconds";if(seconds<3600)return Math.round(seconds/60)+" minutes";if(seconds<86400)return Math.round(seconds/3600)+" hours";if(seconds<31536000)return Math.round(seconds/86400)+" days";const years=seconds/31536000;if(years>1e6)return "over a million years";if(years>1000)return Math.round(years/1000)+"k years";return Math.round(years)+" years";}
+  $("checkStrength").addEventListener("click",()=>{
+    const value=$("strengthInput").value;if(!value){$("strengthOutput").textContent="Type a candidate password first.";return;}
+    let pool=0;if(/[a-z]/.test(value))pool+=26;if(/[A-Z]/.test(value))pool+=26;if(/[0-9]/.test(value))pool+=10;if(/[^A-Za-z0-9]/.test(value))pool+=33;
+    const bits=pool>0?value.length*Math.log2(pool):0;
+    const common=["password","123456","123456789","qwerty","letmein","admin","welcome","iloveyou","monkey","dragon","football","abc123","password1","sunshine","princess"];
+    const issues=[];
+    if(common.includes(value.toLowerCase()))issues.push("appears in common-password lists");
+    if(/(.)\1{2,}/.test(value))issues.push("contains repeated characters");
+    if(/(0123|1234|2345|3456|4567|5678|6789|abcd|bcde|cdef|qwerty|asdf)/i.test(value))issues.push("contains a sequence or keyboard pattern");
+    if(/^[a-z]+$/i.test(value))issues.push("uses a single character class");
+    if(value.length<12)issues.push("is shorter than 12 characters");
+    let label=bits<28?"Very weak":bits<36?"Weak":bits<60?"Reasonable":bits<80?"Strong":"Very strong";
+    if(common.includes(value.toLowerCase()))label="Very weak";
+    else if(/(0123|1234|2345|3456|4567|5678|6789|abcd|bcde|cdef|qwerty|asdf)/i.test(value)||/(.)\1{2,}/.test(value))label=bits<60?"Weak":"Reasonable";
+    const seconds=Math.pow(2,bits-1)/1e10;
+    $("strengthOutput").textContent=["Estimated entropy: "+bits.toFixed(1)+" bits ("+label+")","Length: "+value.length+" · Character pool: "+pool,"Offline crack estimate at 10^10 guesses/s: "+humanTime(seconds),issues.length?"Weaknesses: "+issues.join("; "):"No obvious pattern warnings."].join("\n");
+  });
+
+  $("identifyHash").addEventListener("click",()=>{
+    const value=$("hashIdInput").value.trim();if(!value){$("hashIdOutput").textContent="Paste a hash value first.";return;}
+    const found=[];const add=(name,detail)=>found.push("• "+name+" — "+detail);
+    if(/^\$2[aby]\$\d{2}\$/.test(value))add("bcrypt","password-hash string with cost factor");
+    else if(/^\$argon2(id|i|d)\$/.test(value))add("Argon2","password-hash string");
+    else if(/^\$6\$/.test(value))add("SHA-512 crypt","Unix crypt password hash");
+    else if(/^\$5\$/.test(value))add("SHA-256 crypt","Unix crypt password hash");
+    else if(/^\$1\$/.test(value))add("MD5 crypt","legacy Unix crypt password hash");
+    else if(/^\$y\$/.test(value))add("yescrypt","Unix crypt password hash");
+    else if(/^[a-f0-9]+$/i.test(value)){
+      const sizes={8:"CRC-32 or a truncated value",16:"MySQL 3.23 hash or a truncated digest",32:"MD5 or NTLM (128-bit hex)",40:"SHA-1 (160-bit hex)",56:"SHA-224 (224-bit hex)",64:"SHA-256, SHA3-256 or BLAKE2s-256",96:"SHA-384 or SHA3-384",128:"SHA-512 or SHA3-512"};
+      if(sizes[value.length])add("Hex digest",sizes[value.length]);else add("Hex string","length "+value.length+" does not match a common digest size");
+    }else if(/^[A-Za-z0-9+/]+={0,2}$/.test(value)){
+      const sizes={24:"16-byte digest, e.g. Base64-encoded MD5",28:"20-byte digest, e.g. Base64-encoded SHA-1",44:"32-byte digest, e.g. Base64-encoded SHA-256",88:"64-byte digest, e.g. Base64-encoded SHA-512"};
+      if(sizes[value.length])add("Base64 digest",sizes[value.length]);else add("Base64-like string","length "+value.length+" is not a common digest size");
+    }
+    $("hashIdOutput").textContent=(found.length?found.join("\n"):"No common hash format matched.")+"\n\nFormat alone cannot prove the algorithm. Verify against a known value in your own lab.";
+  });
+
+  const CVSS_METRICS={AV:{N:.85,A:.62,L:.55,P:.2},AC:{L:.77,H:.44},UI:{N:.85,R:.62},CIA:{H:.56,L:.22,N:0},PR:{U:{N:.85,L:.62,H:.27},C:{N:.85,L:.68,H:.5}}};
+  let lastCvss=null;
+  function roundUp(x){return Math.ceil(Math.round(x*100000)/100000*10)/10;}
+  $("calcCvss").addEventListener("click",()=>{
+    const S=$("cvssS").value,AV=$("cvssAV").value,AC=$("cvssAC").value,PR=$("cvssPR").value,UI=$("cvssUI").value,C=$("cvssC").value,I=$("cvssI").value,A=$("cvssA").value;
+    const iss=1-(1-CVSS_METRICS.CIA[C])*(1-CVSS_METRICS.CIA[I])*(1-CVSS_METRICS.CIA[A]);
+    const impact=S==="U"?6.42*iss:7.52*(iss-0.029)-3.25*Math.pow(iss-0.02,15);
+    const exploitability=8.22*CVSS_METRICS.AV[AV]*CVSS_METRICS.AC[AC]*CVSS_METRICS.PR[S][PR]*CVSS_METRICS.UI[UI];
+    let score=0;
+    if(impact>0)score=S==="U"?roundUp(Math.min(impact+exploitability,10)):roundUp(Math.min(1.08*(impact+exploitability),10));
+    const severity=score===0?"None":score<4?"Low":score<7?"Medium":score<9?"High":"Critical";
+    const vector="CVSS:3.1/AV:"+AV+"/AC:"+AC+"/PR:"+PR+"/UI:"+UI+"/S:"+S+"/C:"+C+"/I:"+I+"/A:"+A;
+    $("cvssOutput").textContent=[vector,"","Base score: "+score.toFixed(1)+" ("+severity+")","Impact sub-score: "+Math.max(0,impact).toFixed(1)+" · Exploitability: "+exploitability.toFixed(1),"","Base score only; temporal and environmental metrics are not included."].join("\n");
+    lastCvss={score,severity,vector};
+  });
+  $("cvssToReport").addEventListener("click",()=>{
+    if(!lastCvss){toast("Calculate a CVSS score first.");return;}
+    addToReport({severity:lastCvss.severity==="None"?"Informational":lastCvss.severity,summary:"CVSS 3.1 base score: "+lastCvss.score.toFixed(1)+" ("+lastCvss.severity+")\nVector: "+lastCvss.vector,evidence:lastCvss.vector});
+  });
+
+  const NMAP_RISK={21:["FTP","high","prefer SFTP and restrict access"],23:["Telnet","critical","disable Telnet and use SSH"],445:["SMB","high","block file sharing at the lab boundary"],3389:["RDP","high","require VPN and MFA for remote desktop"],3306:["MySQL","medium","bind the database to localhost or restrict access"],5432:["PostgreSQL","medium","bind the database to localhost or restrict access"],6379:["Redis","high","require authentication and bind privately"],9200:["Elasticsearch","high","do not expose the search API without authentication"],27017:["MongoDB","high","enable authentication and restrict network access"],5900:["VNC","high","tunnel screen sharing or disable it"],11211:["Memcached","high","bind memcached to the private interface"],2375:["Docker API","critical","never expose the Docker daemon without TLS and auth"]};
+  let nmapFinding=null;
+  $("analyzeNmap").addEventListener("click",()=>{
+    const raw=$("nmapInput").value;if(!raw.trim()){toast("Paste Nmap output first.");return;}
+    let host="";const hostMatch=raw.match(/Nmap scan report for ([^\n]+)/);if(hostMatch)host=hostMatch[1].replace(/\s*\(.*\)\s*$/,"").trim();
+    const ports=[];const seen=new Set();
+    raw.split(/\r?\n/).forEach(line=>{
+      const m=line.match(/^(\d{1,5})\/(tcp|udp)\s+(open(?:\|filtered)?|filtered|closed)\s*(\S*)\s*(.*)$/i);
+      if(!m)return;const state=m[3].toLowerCase();if(state!=="open"&&state!=="open|filtered")return;
+      const key=m[1]+"/"+m[2];if(seen.has(key))return;seen.add(key);
+      ports.push({port:Number(m[1]),proto:m[2].toLowerCase(),service:m[4]||"unknown",version:(m[5]||"").trim()});
+    });
+    if(!ports.length){$("nmapOutput").innerHTML='<p class="empty">No open port lines found. Paste lines such as "80/tcp open http nginx".</p>';nmapFinding=null;return;}
+    const rows=ports.map(p=>{const risk=NMAP_RISK[p.port];const sev=risk?risk[1]:"info";const detail=(p.version||"Open service")+(risk?" — "+risk[2]:"");return {title:p.port+"/"+p.proto+" "+p.service,detail,sev};});
+    const riskiest=topSeverity(rows.map(r=>r.sev));
+    renderResults("nmapOutput",ports.length+" open port"+(ports.length===1?"":"s")+(host?" on "+host:"")+". Highest exposure: "+sevLabel(riskiest)+".",rows);
+    nmapFinding={title:"Open services on "+(host||"lab host"),severity:sevLabel(riskiest),asset:host||"Local lab target",summary:"Nmap reported "+ports.length+" open port(s): "+ports.map(p=>p.port+"/"+p.proto+" "+p.service).join(", ")+". Review each service against the intended lab exposure.",evidence:raw.split(/\r?\n/).map(l=>l.trim()).filter(l=>/^\d+\//.test(l)).slice(0,10).join("\n"),fix:"Confirm every open service is expected, restrict access to the private lab network, and disable or firewall services that are not required."};
+  });
+  $("nmapToReport").addEventListener("click",()=>{if(!nmapFinding){toast("Analyze Nmap output first.");return;}addToReport(nmapFinding);});
+
+  const PATH_FLAGS=[[/\.git(\/|$)/i,"Git metadata can leak source history"],[/\.env(\/|$)/i,"environment file may contain secrets"],[/backup|\.bak|\.zip|\.sql/i,"backup or database artefact"],[/admin/i,"administrative interface"],[/debug|test|dev/i,"debug or development surface"],[/swagger|openapi/i,"API documentation"],[/phpmyadmin|adminer/i,"database console"],[/server-status|server-info/i,"server status page"],[/api(\/|$)/i,"API surface"],[/upload|files/i,"file upload or storage path"],[/config|settings/i,"configuration surface"]];
+  let gobusterFinding=null;
+  $("analyzeGobuster").addEventListener("click",()=>{
+    const raw=$("gobusterInput").value;if(!raw.trim()){toast("Paste directory-discovery output first.");return;}
+    const paths=[];const seen=new Set();
+    raw.split(/\r?\n/).forEach(line=>{
+      const m=line.trim().match(/(\S+)\s+\(Status:\s*(\d{3})\)/);if(!m)return;
+      let path=m[1].replace(/^https?:\/\/[^/]+/i,"");if(!path.startsWith("/"))path="/"+path;
+      if(seen.has(path))return;seen.add(path);
+      const sizeMatch=line.match(/\[Size:\s*(\d+)\]/);
+      paths.push({path,status:Number(m[2]),size:sizeMatch?Number(sizeMatch[1]):null});
+    });
+    if(!paths.length){$("gobusterOutput").innerHTML='<p class="empty">No path lines found. Paste lines such as "/admin (Status: 301)".</p>';gobusterFinding=null;return;}
+    const rows=paths.map(p=>{
+      const flag=PATH_FLAGS.find(f=>f[0].test(p.path));let sev="info";
+      if(flag&&(p.status===200||p.status===204))sev="high";
+      else if(flag&&(p.status===301||p.status===302||p.status===401||p.status===403))sev="medium";
+      else if(p.status===200||p.status===204)sev="low";
+      else if(p.status>=500)sev="medium";
+      return {title:p.path,detail:"Status "+p.status+(p.size!==null?" · "+p.size+" bytes":"")+(flag?" — "+flag[1]:""),sev};
+    });
+    const sensitive=paths.filter(p=>PATH_FLAGS.some(f=>f[0].test(p.path))).length;
+    const direct=paths.filter(p=>p.status===200||p.status===204).length;
+    renderResults("gobusterOutput",paths.length+" path"+(paths.length===1?"":"s")+" · "+direct+" returned 200/204 · "+sensitive+" sensitive name"+(sensitive===1?"":"s")+".",rows);
+    const riskiest=topSeverity(rows.map(r=>r.sev));
+    gobusterFinding={title:"Content discovery results",severity:sevLabel(riskiest),asset:"Local lab web target",summary:paths.length+" path(s) discovered; "+direct+" returned 200/204 and "+sensitive+" matched a sensitive name. Review exposed paths and confirm which are intended.",evidence:raw.split(/\r?\n/).map(l=>l.trim()).filter(Boolean).slice(0,12).join("\n"),fix:"Remove backup and metadata files, require authentication on administrative or debug surfaces, and return a generic response for paths that should not exist."};
+  });
+  $("gobusterToReport").addEventListener("click",()=>{if(!gobusterFinding){toast("Analyze directory output first.");return;}addToReport(gobusterFinding);});
+
+  let httpFinding=null;
+  $("analyzeHttp").addEventListener("click",()=>{
+    const raw=$("httpInput").value;if(!raw.trim()){toast("Paste an HTTP response first.");return;}
+    const lines=raw.split(/\r?\n/);const statusMatch=raw.match(/^HTTP\/[\d.]+\s+(\d{3})\s*(.*)$/m);
+    if(!statusMatch){$("httpOutput").innerHTML='<p class="empty">No status line found. Start with a line such as "HTTP/1.1 200 OK".</p>';httpFinding=null;return;}
+    const status=Number(statusMatch[1]);const reason=(statusMatch[2]||"").trim();
+    const headers={};const cookies=[];let inHeaders=true;
+    lines.forEach(line=>{if(!inHeaders)return;if(!line.trim()){inHeaders=false;return;}if(/^HTTP\//i.test(line))return;const i=line.indexOf(":");if(i<0)return;const key=line.slice(0,i).trim().toLowerCase();const value=line.slice(i+1).trim();if(key==="set-cookie")cookies.push(value);(headers[key]=headers[key]||[]).push(value);});
+    const header=key=>headers[key]?headers[key].join(", "):"";
+    const rows=[];
+    if(status>=500)rows.push({title:"Server error "+status,detail:"The response indicates a server-side failure; check logs for information leakage.",sev:"medium"});
+    if(header("server"))rows.push({title:"Server banner",detail:header("server")+" — consider suppressing version details.",sev:"low"});
+    if(header("x-powered-by"))rows.push({title:"Technology banner",detail:header("x-powered-by")+" — remove unnecessary disclosure.",sev:"low"});
+    [["strict-transport-security","HSTS","medium"],["content-security-policy","Content-Security-Policy","medium"],["x-content-type-options","X-Content-Type-Options","low"],["referrer-policy","Referrer-Policy","low"],["permissions-policy","Permissions-Policy","info"]].forEach(check=>{if(!header(check[0]))rows.push({title:check[1]+" missing",detail:"Add and tune this browser-facing control for the deployment.",sev:check[2]});});
+    cookies.forEach(cookie=>{
+      const name=(cookie.split("=")[0]||"cookie").trim();const missing=[];
+      if(!/;\s*secure/i.test(cookie))missing.push("Secure");
+      if(!/;\s*httponly/i.test(cookie))missing.push("HttpOnly");
+      if(!/;\s*samesite/i.test(cookie))missing.push("SameSite");
+      if(missing.length)rows.push({title:"Cookie "+name,detail:"Missing flag(s): "+missing.join(", ")+".",sev:missing.includes("Secure")||missing.includes("HttpOnly")?"medium":"low"});
+    });
+    const corsOrigin=header("access-control-allow-origin");const corsCredentials=header("access-control-allow-credentials");
+    if(corsOrigin==="*")rows.push({title:"Wildcard CORS",detail:"Access-Control-Allow-Origin is * — confirm this is intended.",sev:"medium"});
+    if(corsOrigin==="*"&&/true/i.test(corsCredentials))rows.push({title:"CORS credential conflict",detail:"Wildcard origin with credentials is invalid and risky.",sev:"high"});
+    if(header("location"))rows.push({title:"Redirect",detail:"Location: "+header("location"),sev:"info"});
+    if(!rows.length)rows.push({title:"No obvious issues",detail:"Basic checks passed; this is not a full security assessment.",sev:"info"});
+    const riskiest=topSeverity(rows.map(r=>r.sev));
+    renderResults("httpOutput",status+" "+(reason||"response")+" · "+cookies.length+" cookie"+(cookies.length===1?"":"s")+" · "+rows.length+" observation"+(rows.length===1?"":"s")+".",rows);
+    httpFinding={title:"HTTP response review",severity:sevLabel(riskiest),asset:header("host")||"Local lab web target",summary:"Status "+status+" "+(reason||"")+". "+rows.length+" observation(s) from header and cookie review.",evidence:raw.split(/\r?\n/).map(l=>l.trim()).filter(Boolean).slice(0,12).join("\n"),fix:"Add missing browser-facing headers, set Secure/HttpOnly/SameSite on cookies, remove version banners, and confirm CORS and redirects are intentional."};
+  });
+  $("httpToReport").addEventListener("click",()=>{if(!httpFinding){toast("Analyze an HTTP response first.");return;}addToReport(httpFinding);});
+
   function updateProgress(){
     const checks=Array.from(document.querySelectorAll(".progress-check"));const count=checks.filter(x=>x.checked).length;const pct=Math.round(count/checks.length*100);
     $("progressText").textContent=count+" of "+checks.length+" milestones complete";$("progressPct").textContent=pct+"%";$("progressFill").style.width=pct+"%";
     try{localStorage.setItem("hackerlab-progress-v2",JSON.stringify(checks.filter(x=>x.checked).map(x=>x.dataset.progress)));}catch(e){}
+    updateGamification(count);
   }
   try{const saved=JSON.parse(localStorage.getItem("hackerlab-progress-v2")||"[]");document.querySelectorAll(".progress-check").forEach(x=>x.checked=saved.includes(x.dataset.progress));}catch(e){}
   document.querySelectorAll(".progress-check").forEach(x=>x.addEventListener("change",updateProgress));updateProgress();
@@ -316,7 +674,7 @@ docker compose run --rm hackerlab<button class="btn small copy-btn" id="copyAll"
   $("globalSearch").addEventListener("input",filterCatalog);
   document.addEventListener("keydown",e=>{if(e.key==="/"&&!["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();$("globalSearch").focus();}if(e.key==="Escape"&&document.activeElement===$("globalSearch")){$("globalSearch").value="";filterCatalog();$("globalSearch").blur();}});
   const navLinks=Array.from(document.querySelectorAll(".nav a[href^='#']"));
-  if("IntersectionObserver" in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+entry.target.id));}}),{rootMargin:"-20% 0px -65% 0px"});["overview","toolkit","workflows","utilities","learning","reporting","resources"].forEach(id=>{const el=$(id);if(el)io.observe(el);});}
+  if("IntersectionObserver" in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+entry.target.id));}}),{rootMargin:"-20% 0px -65% 0px"});["overview","toolkit","workflows","analyzers","utilities","learning","reporting","resources"].forEach(id=>{const el=$(id);if(el)io.observe(el);});}
 })();
 </script>
 </body>
