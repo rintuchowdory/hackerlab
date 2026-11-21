@@ -7,8 +7,9 @@ The HackerLab dashboard is a static, local-first learning workspace. It is desig
 - Search and category filters for network, web/API, code and supply-chain, cloud/container, defence/response, and learning resources.
 - Clear distinction between tools already represented in this repository and third-party tools that are external references only.
 - Guided workflows for asset discovery, web application review, secure code release, and defensive investigation.
-- Six browser-side utilities: password generation with Web Crypto, SHA-256 text hashing, JSON formatting/validation, URL component encoding/decoding, a pasted HTTP security-header checklist, and an IPv4/CIDR subnet helper.
-- Browser-local learning progress and a Markdown security finding report draft.
+- Offline scanner-output analyzers for Nmap port output, Gobuster/directory paths and raw HTTP responses. They parse pasted text only, rank observations and can prefill the report builder.
+- Eleven browser-side utilities: password generation with Web Crypto, SHA-256 text hashing, JSON formatting/validation, URL component encoding/decoding, a pasted HTTP security-header checklist, an IPv4/CIDR subnet helper, Base64 encoding/decoding, JWT inspection, password-strength/entropy estimation, hash-format identification and a CVSS 3.1 base-score calculator.
+- Browser-local learning progress with XP, levels and badges, a saved finding library, JSON export/import of progress and findings, and a Markdown security finding report draft.
 
 ## What's actually in this repository
 
@@ -32,7 +33,7 @@ python3 -m unittest discover -s tests -v
 
 ## Browser utility privacy
 
-The utility calculations are performed in the browser. Learning progress is saved in the browser's local storage. The static dashboard does not send these utility inputs to an API. Do not paste live credentials, personal information, or sensitive production data into shared devices or browser profiles. SHA-256 uses the Web Crypto API and requires a secure browser context such as HTTPS.
+The utility calculations and scanner-output parsing are performed in the browser. Learning progress and saved findings are kept in the browser's local storage; JSON export/import moves them between browsers. The static dashboard does not send these inputs to an API. Do not paste live credentials, personal information, or sensitive production data into shared devices or browser profiles. SHA-256 uses the Web Crypto API and requires a secure browser context such as HTTPS.
 
 ## Safety and scope
 
